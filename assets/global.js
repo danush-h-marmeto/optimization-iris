@@ -1852,3 +1852,127 @@ class AccountIcon extends HTMLElement {
 }
 
 customElements.define("account-icon", AccountIcon);
+class LazySection extends HTMLElement {
+  static sectionsToFetch = [];
+
+  constructor() {
+    super();
+
+    this.section = this.closest("section")?.id || this.closest("[id]").id;
+    this.section = this.section?.replace("shopify-section-", "");
+
+    this.trigger = this.dataset.triggerEvent || "intersection-observer";
+    this.targetSelector = this.dataset.triggerTarget || "body";
+
+    this.boundHandleMouseover = this.handleMouseover.bind(this);
+    this.boundHandleClick = this.handleClick.bind(this);
+  }
+
+  connectedCallback() {
+    const targetElement = document.querySelector(this.targetSelector);
+
+    // Different triggers based on data-trigger attribute
+    if (this.trigger === "mouseover") {
+      if (screen.width < 990) return;
+
+      targetElement.addEventListener("mouseover", this.boundHandleMouseover);
+    } else if (this.trigger === "click") {
+      targetElement.addEventListener("click", this.boundHandleClick);
+    } else {
+      // Default to intersection observer
+      new IntersectionObserver(this.handleIntersection.bind(this), {
+        rootMargin: "0px 0px 200px 0px",
+      }).observe(this);
+    }
+  }
+
+  // Handler for intersection-observer trigger
+  handleIntersection(entries, observer) {
+    if (!entries[0].isIntersecting) return;
+    observer.unobserve(this);
+
+    this.fetchSections();
+  }
+
+  // Handler for mouseover trigger
+  handleMouseover() {
+    // Remove trigger once added to sectionsToFetch
+    this.removeTrigger();
+    this.fetchSections();
+  }
+
+  // Handler for click trigger
+  handleClick() {
+    // Remove trigger once added to sectionsToFetch
+    this.removeTrigger();
+    this.fetchSections();
+  }
+
+  // Common function for fetching sections
+  fetchSections() {
+    LazySection.sectionsToFetch.push(this.section);
+    const sectionsToFetchBatch =
+      LazySection.sectionsToFetch.length == 5
+        ? LazySection.sectionsToFetch.splice(0, 5)
+        : LazySection.sectionsToFetch;
+
+    // Check if there is an ongoing network request
+    if (LazySection.abortController) {
+      LazySection.abortController.abort(
+        "Section list updated, cancelling request."
+      );
+    }
+
+    LazySection.abortController =
+      sectionsToFetchBatch.length < 5 && new AbortController();
+
+    fetch(
+      window.location.pathname + "?sections=" + sectionsToFetchBatch.join(","),
+      LazySection.abortController.signal
+        ? { signal: LazySection.abortController.signal }
+        : {}
+    )
+      .then((response) => response.json())
+      .then((json) => {
+        for (const [key, value] of Object.entries(json)) {
+          const sectionContent = new DOMParser()
+            .parseFromString(value, "text/html")
+            .getElementById("shopify-section-" + key);
+
+          if (sectionContent && sectionContent.innerHTML.trim().length) {
+            const section = document.getElementById("shopify-section-" + key);
+            section.innerHTML = sectionContent.innerHTML;
+
+            // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
+            section.querySelectorAll("script").forEach((oldScriptTag) => {
+              const newScriptTag = document.createElement("script");
+              Array.from(oldScriptTag.attributes).forEach((attribute) => {
+                newScriptTag.setAttribute(attribute.name, attribute.value);
+              });
+              newScriptTag.appendChild(
+                document.createTextNode(oldScriptTag.innerHTML)
+              );
+              oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
+            });
+          }
+        }
+
+        if (sectionsToFetchBatch.length < 5) LazySection.sectionsToFetch = [];
+      })
+      .catch((e) => {
+        console.warn(e);
+      });
+  }
+
+  // Remove trigger based on data-target attribute
+  removeTrigger() {
+    const targetElement = document.querySelector(this.targetSelector);
+
+    if (targetElement) {
+      targetElement.removeEventListener("mouseover", this.boundHandleMouseover);
+      targetElement.removeEventListener("click", this.boundHandleClick);
+    }
+  }
+}
+
+customElements.define("lazy-section", LazySection);

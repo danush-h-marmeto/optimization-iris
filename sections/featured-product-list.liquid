@@ -1,3 +1,11 @@
+{%- capture lazy_load_section %}
+{%- render 'lazy-load-section-validations' -%}
+{%- endcapture -%}
+
+{% if lazy_load_section != blank %}
+<lazy-section>
+  {% endif %}
+{% if lazy_load_section == blank %}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -146,7 +154,13 @@
     {%- endif -%}
   </div>
 </div>
+{% else %}
+  {%- render 'lazy-spinner' -%}
+{% endif %}
 
+{% if lazy_load_section != blank %}
+</lazy-section>
+{% endif %}
 {% schema %}
 {
   "name": "Featured product list",

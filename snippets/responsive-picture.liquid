@@ -64,7 +64,8 @@
   >
   <img
     src="{{ desktopImage | image_url: width: 1500 }}"
-    loading="{{ loading | default: "lazy" }}"
+    loading="{{ loading }}"
+    fetchpriority="{{fetchpriority}}"
     width="{{ desktopImage.width }}"
     height="{{ desktopImage.width | divided_by: desktopImage.aspect_ratio | round }}"
     alt="{{ alt | default: desktopImage.alt | escape }}"

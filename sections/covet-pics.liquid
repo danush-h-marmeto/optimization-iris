@@ -1,3 +1,11 @@
+{%- capture lazy_load_section %}
+{%- render 'lazy-load-section-validations' -%}
+{%- endcapture -%}
+
+{% if lazy_load_section != blank %}
+<lazy-section>
+    {% endif %}
+{% if lazy_load_section == blank %}
 {% if section.settings.top_margin > 0 or section.settings.bottom_margin > 0 %}
   {% style %}
     .covet-pics--inner {
@@ -34,7 +42,13 @@
     {{ section.settings['gallery-code'] }}
   </div>
 </div>
+{% else %}
+{%- render 'lazy-spinner' -%}
+{% endif %}
 
+{% if lazy_load_section != blank %}
+</lazy-section>
+{% endif %}
 {% schema %}
 {
     "name": "Covet.pics Gallery",

@@ -8,6 +8,68 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Preload Hero Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "preload_image_desktop",
+        "label": "Image(Desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "preload_image_mobile",
+        "label": "Image(Mobile)"
+      }
+    ]
+  },
+  {
+    "name": "Lazy Load Sections",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_lazy_loading_sections",
+        "label": "Enable lazy loading sections",
+        "info": "This will enable lazy loading of sections. Can improve performance.",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "hp_eager_section_count",
+        "label": "Home page eager section count",
+        "default": 3,
+        "info": "Specify the number of sections to load beforehand from the top on the home page. This excludes the header and footer sections by default."
+      },
+      {
+        "type": "number",
+        "id": "pdp_eager_section_count",
+        "label": "Product page eager section count",
+        "default": 2,
+        "info": "Specify the number of sections to load beforehand from the top on the product page. This excludes the header and footer sections by default."
+      },
+      {
+        "type": "number",
+        "id": "plp_eager_section_count",
+        "label": "Collection page eager section count",
+        "default": 2,
+        "info": "Specify the number of sections to load beforehand from the top on the collection page. This excludes the header and footer sections by default."
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_lazy_loading_header_sections",
+        "label": "Enable lazy loadinbeowg Header Sections",
+        "info": "This option allows you to enable lazy loading of header sections, which can be useful for lazy loading mega menu item sections. Can improve performance.",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "header_eager_section_count",
+        "label": "Header eager section count",
+        "default": 2,
+        "info": "Specify how many sections to load in advance from the top in header. Be careful not to include sections that are 'mega menu items' in the count."
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

@@ -1,3 +1,11 @@
+{%- capture lazy_load_section %}
+{%- render 'lazy-load-section-validations' -%}
+{%- endcapture -%}
+
+{% if lazy_load_section != blank %}
+<lazy-section>
+  {% endif %}
+{% if lazy_load_section == blank %}
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image != blank -%}
@@ -37,7 +45,7 @@
   {%- if section.settings.image != blank -%}
     <a class="banner-url--link" href="{{ section.settings.banner_url }}" {% if section.settings.banner_url == blank %}role="link" aria-disabled="true"{% endif %}>
       <div class="banner__media media{% if section.settings.image == blank %} placeholder{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-        {% render 'responsive-picture', desktopImage: section.settings.image, mobileImage: section.settings.mobile_image, class: 'media'%}
+        {% render 'responsive-picture', desktopImage: section.settings.image, mobileImage: section.settings.mobile_image, class: 'media', loading:false, fetchpriority:'high' %}
       </div>
     </a>
   {%- elsif section.settings.image == blank -%}
@@ -97,7 +105,13 @@
     </div>
   {%- endif -%}
 </div>
-
+{% else %}
+  {%- render 'lazy-spinner' -%}
+{% endif %}
+  
+{% if lazy_load_section != blank %}
+</lazy-section>
+{% endif %}
 
 {% schema %}
 {
