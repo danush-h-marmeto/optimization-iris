@@ -1,0 +1,588 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_PnWppx": {
+          "type": "heading",
+          "settings": {
+            "heading": "As the season turns",
+            "heading_size": "h1"
+          }
+        },
+        "text_MNKAUm": {
+          "type": "text",
+          "settings": {
+            "text": "IRIS | AW24",
+            "text_style": "body"
+          }
+        },
+        "buttons_37qVHN": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections\/by-iris-new-in",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PnWppx",
+        "text_MNKAUm",
+        "buttons_37qVHN"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP_Frances_v2.png",
+        "mobile_image": "shopify:\/\/shop_images\/HP_FRANCES_V2.jpg",
+        "banner_url": "shopify:\/\/collections\/by-iris-new-in",
+        "image_overlay_opacity": 0,
+        "show_overlay_content": true,
+        "enable_sale_text": false,
+        "desktop_content_position": "middle-right",
+        "show_text_box": false,
+        "enable_image_zoom": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "featured_product_list_RxJ7FF": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_YBQwGH": {
+          "type": "product",
+          "settings": {
+            "product_item": "luna-cord-dress-pink"
+          }
+        },
+        "product_pYGJkk": {
+          "type": "product",
+          "settings": {
+            "product_item": "harper-ditsy-print-skirt-pink"
+          }
+        },
+        "product_wPGbwm": {
+          "type": "product",
+          "settings": {
+            "product_item": "rocco-printed-cord-frill-blouse-winter-berries"
+          }
+        },
+        "product_T4jRkN": {
+          "type": "product",
+          "settings": {
+            "product_item": "frances-printed-cord-dress-navy"
+          }
+        }
+      },
+      "block_order": [
+        "product_YBQwGH",
+        "product_pYGJkk",
+        "product_wPGbwm",
+        "product_T4jRkN"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36,
+        "top_overlap": 0
+      }
+    },
+    "image_with_text_XEQrep": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_hqtqfh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hot Chocolate",
+            "heading_size": "h0"
+          }
+        },
+        "text_YeyFdT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It's the colour of the season: chocolate brown has been making itself known in every corner of the fashion world, warming up the AW24 runways and bringing that element of quiet luxury to every fashion editor's top picks for fall. Shop the edit below.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_Vjp47A": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/chocolate",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hqtqfh",
+        "text_YeyFdT",
+        "button_Vjp47A"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/fe9540b94d6f7791af64e538dbca7950.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_list_WmVGRP": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_FUeXU8": {
+          "type": "product",
+          "settings": {
+            "product_item": "sasha-cord-jumpsuit-2"
+          }
+        },
+        "product_PFh7Mg": {
+          "type": "product",
+          "settings": {
+            "product_item": "mary-jane-velvet-shoe-brown"
+          }
+        },
+        "product_UpzwNw": {
+          "type": "product",
+          "settings": {
+            "product_item": "detown-blazer"
+          }
+        },
+        "product_8JUeHE": {
+          "type": "product",
+          "settings": {
+            "product_item": "lucca-crew-neck-tank-knit-chocolate"
+          }
+        }
+      },
+      "block_order": [
+        "product_FUeXU8",
+        "product_PFh7Mg",
+        "product_UpzwNw",
+        "product_8JUeHE"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "top_overlap": 150
+      }
+    },
+    "image_with_text_VPMcKz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_n637jg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Moi London in store today!",
+            "heading_size": "h0"
+          }
+        },
+        "text_6jpe7Y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join the founders of Moi London  in our Battersea store today for an event to celebrate our exclusive collaboration.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_XAbKcU": {
+          "type": "button",
+          "settings": {
+            "button_label": "DISCOVER MORE",
+            "button_link": "shopify:\/\/pages\/events-at-iris",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_n637jg",
+        "text_6jpe7Y",
+        "button_XAbKcU"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/moi_london.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_P3jnNt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nLFVyR": {
+          "type": "heading",
+          "settings": {
+            "heading": "New in",
+            "heading_size": "h0"
+          }
+        },
+        "text_JJM8pf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover our latest arrivals<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_LJwUJ8": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NEW IN",
+            "button_link": "shopify:\/\/collections\/new-in-this-week-1",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nLFVyR",
+        "text_JJM8pf",
+        "button_LJwUJ8"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/5cfea68d579666072150126a5f6f8be0.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_list_jmaU7k": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_rmJrqU": {
+          "type": "product",
+          "settings": {
+            "product_item": "faizae-printed-blouse-beige"
+          }
+        },
+        "product_bW3eCy": {
+          "type": "product",
+          "settings": {
+            "product_item": "luca-wide-trouser-black-1"
+          }
+        },
+        "product_awa77Q": {
+          "type": "product",
+          "settings": {
+            "product_item": "mali-suede-boot-camel"
+          }
+        },
+        "product_TPVrUW": {
+          "type": "product",
+          "settings": {
+            "product_item": "gaspard-cropped-cardigan-chocolate"
+          }
+        }
+      },
+      "block_order": [
+        "product_rmJrqU",
+        "product_bW3eCy",
+        "product_awa77Q",
+        "product_TPVrUW"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36,
+        "top_overlap": 200
+      }
+    },
+    "image_with_text_6xDng3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CNkJcR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Golden Glow",
+            "heading_size": "h0"
+          }
+        },
+        "text_barcQW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the nights draw in, we are gravitating towards the glowing creams and golds that are landing in the boutiques this week –<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_T7nH4q": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/golden-glow",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CNkJcR",
+        "text_barcQW",
+        "button_T7nH4q"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/6ba1b4543583ea19a38a1c8f990b1cdf.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_list_7JkEPV": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_rMaHta": {
+          "type": "product",
+          "settings": {
+            "product_item": "obria-knit-gold"
+          }
+        },
+        "product_Qg6G9e": {
+          "type": "product",
+          "settings": {
+            "product_item": "divinou-suede-bag-chocolate"
+          }
+        },
+        "product_aRMmiM": {
+          "type": "product",
+          "settings": {
+            "product_item": "delias-trousers-beige"
+          }
+        },
+        "product_e6ztRB": {
+          "type": "product",
+          "settings": {
+            "product_item": "medalist-low-trainer-platinum-1"
+          }
+        }
+      },
+      "block_order": [
+        "product_rMaHta",
+        "product_Qg6G9e",
+        "product_aRMmiM",
+        "product_e6ztRB"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36,
+        "top_overlap": 200
+      }
+    },
+    "image_with_text_Br3ntN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Y4UYnk": {
+          "type": "heading",
+          "settings": {
+            "heading": "It's Jeans Season",
+            "heading_size": "h0"
+          }
+        },
+        "text_VYaXLt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From queen-of-jeans Donna Ida to sustainable New-York denim brand DL1961, the Iris denim edit brings you the perfect pair of jeans in every style. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_qmWPqg": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP JEans",
+            "button_link": "shopify:\/\/collections\/denim",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y4UYnk",
+        "text_VYaXLt",
+        "button_qmWPqg"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ae4ab46d7261a5bf9aa477800e05010e_a0eaeea6-38b5-4f80-8e78-d3beaa408fa5.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "covet_pics_3CTMqb": {
+      "type": "covet-pics",
+      "settings": {
+        "gallery-code": "<covet-pics-widget gallery-embed-id=\"151684\"><\/covet-pics-widget>",
+        "color_scheme": "",
+        "top_margin": 50,
+        "bottom_margin": 0,
+        "title": "#irisfashion"
+      }
+    },
+    "image_banner_d8WJUJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_HKcWJg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_JN6fRX": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_g8LTJw": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HKcWJg",
+        "text_JN6fRX",
+        "buttons_g8LTJw"
+      ],
+      "disabled": true,
+      "settings": {
+        "banner_url": "",
+        "image_overlay_opacity": 0,
+        "show_overlay_content": false,
+        "enable_sale_text": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "enable_image_zoom": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_product_list_RxJ7FF",
+    "image_with_text_XEQrep",
+    "featured_product_list_WmVGRP",
+    "image_with_text_VPMcKz",
+    "image_with_text_P3jnNt",
+    "featured_product_list_jmaU7k",
+    "image_with_text_6xDng3",
+    "featured_product_list_7JkEPV",
+    "image_with_text_Br3ntN",
+    "covet_pics_3CTMqb",
+    "image_banner_d8WJUJ"
+  ]
+}
