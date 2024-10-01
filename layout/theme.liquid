@@ -50,6 +50,7 @@
           | remove: '\/\/app.backinstock.org\/widget\/45449_1675166358.js?category=bis\u0026v=6\u0026shop=iris-fashion-esc.myshopify.com'
           | remove: 'https:\/\/wishlists-scripts.esc-apps-cdn.com\/iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com'
           | remove: 'https:\/\/size-guides.esc-apps-cdn.com\/1714741288-app.iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com' 
+          | remove: 'https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=XZcwPx\u0026shop=iris-fashion-esc.myshopify.com' 
       -}}
     {% else %}
       {{- content_for_header -}}
@@ -349,6 +350,26 @@
     <noscript>
       <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
     </noscript>
+    {%- if settings.cart_type == "drawer" -%}
+    <link rel="preload" href="{{ 'component-cart-drawer.css' | asset_url }}" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ 'component-cart.css' | asset_url }}" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ 'component-totals.css' | asset_url }}" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ 'component-price.css' | asset_url }}" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ 'component-discounts.css' | asset_url }}" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="{{ 'component-cart-drawer.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'component-totals.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'component-discounts.css' | asset_url }}">
+    </noscript>
+    
+    {%- endif -%}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -385,8 +406,10 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-    {% render 'whats-this-popup' %}
-    <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
+    {%- if template.name == 'product' -%}
+      {% render 'whats-this-popup' %}
+      <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
+    {%- endif -%}
     {% sections 'footer-group' %}
     <script>
       window.shopUrl = '{{ request.origin }}';
@@ -467,16 +490,6 @@
       (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"17540634"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
     </script>
     <!-- End Microsoft Advertising UET tag tracking code -->
-    <script
-      async
-      type="text/javascript"
-      src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XZcwPx"
-    ></script>
-    <!-- PickyStory snippet "main_widget_script", do not modify. Safe to remove after the app is uninstalled -->
-    {% if content_for_header contains 'pickystory' %}
-      <script defer src="https://cdn.pickystory.com/widget/dist/latest/pickystory-widget.min.js"></script>
-    {% endif %}
-    <!-- PickyStory end snippet "main_widget_script" -->
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
