@@ -15,6 +15,8 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
+    <link rel="preload" href="https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?subset_id=2&fvd=n4&v=3"
+          as="font" type="font/woff2" crossorigin="anonymous">
 
     <title>
       {{ page_title }}
@@ -31,55 +33,29 @@
     {% render 'preload-lcp' %}
     {% comment %} {%- render 'spdn'-%} {% endcomment %}
     {% render 'defer.js' %}
+    <script>
+      Defer.all('script[type="lazy-script"]', 0, true);
+    </script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    {% comment %} Coming Soon Products & PreOrders {% endcomment %}
-    <script type="text/javascript">
-      gsProductCSID = "2643732856917";
-    </script>
-    <script
-      defer
-      type="text/javascript"
-      src="https://gravity-software.com/js/shopify/pac_shop11242.js?v=3a36bd8c1951976a45189275180c9e7e"
-    ></script>
+    <!-- content for header -->
+    {%- capture head_content -%}{{ content_for_header }}{%- endcapture -%}
+    {% case template %}
+    {% when 'index' %}
+      {{-
+        head_content
+          | remove: 'https:\/\/d23dclunsivw3h.cloudfront.net\/redirect-app.js?shop=iris-fashion-esc.myshopify.com'
+          | remove: 'https:\/\/cdn.fera.ai\/js\/fera.placeholder.js?shop=iris-fashion-esc.myshopify.com'
+          | remove: '\/\/app.backinstock.org\/widget\/45449_1675166358.js?category=bis\u0026v=6\u0026shop=iris-fashion-esc.myshopify.com'
+          | remove: 'https:\/\/wishlists-scripts.esc-apps-cdn.com\/iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com'
+          | remove: 'https:\/\/size-guides.esc-apps-cdn.com\/1714741288-app.iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com' 
+      -}}
+    {% else %}
+      {{- content_for_header -}}
+    {% endcase %}
+    <!-- content for header -->
 
-    <!-- GSSTART Coming Soon code start. Do not change -->
-    <script type="text/javascript">
-      gsProductCSID = "{{ product.id }}"; gsDefaultV = "{{ product.selected_or_first_available_variant.id }}";
-    </script>
-    <script
-      defer
-      type="text/javascript"
-      src="https://gravity-software.com/js/shopify/pac_shop11242.js?v=3351f15b27324033021ca66c6b660b6b"
-    ></script>
-
-    <script>
-      window.sweet=window.sweet||{},window.sweet.q=sweet.q||[],
-      window.sweet.init=function(e){this.cid=e;},
-      window.sweet.track=function(){this.q.push(arguments)};var a=document.createElement("script"),
-      m=document.getElementsByTagName("script")[0];
-      a.async=1,a.src="https://track.sweetanalytics.com/sweet.min.js",m.parentNode.insertBefore(a,m);
-      sweet.init('AT-6176d2947f3e0');
-      sweet.track('pageview', 1);
-    </script>
-
-        <!-- content for header -->
-        {%- capture head_content -%}{{ content_for_header }}{%- endcapture -%}
-        {% case template %}
-        {% when 'index' %}
-          {{-
-            head_content
-              | remove: 'https:\/\/d23dclunsivw3h.cloudfront.net\/redirect-app.js?shop=iris-fashion-esc.myshopify.com'
-              | remove: 'https:\/\/cdn.fera.ai\/js\/fera.placeholder.js?shop=iris-fashion-esc.myshopify.com'
-              | remove: '\/\/app.backinstock.org\/widget\/45449_1675166358.js?category=bis\u0026v=6\u0026shop=iris-fashion-esc.myshopify.com'
-              | remove: 'https:\/\/wishlists-scripts.esc-apps-cdn.com\/iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com'
-              | remove: 'https:\/\/size-guides.esc-apps-cdn.com\/1714741288-app.iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com' 
-          -}}
-        {% else %}
-          {{- content_for_header -}}
-        {% endcase %}
-        <!-- content for header -->
     {%- if template.name == 'index' -%}
       {%- render 'hp-critical-css' -%}
     {%- endif -%}
@@ -88,40 +64,31 @@
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
-    {{ 'base.css' | asset_url | stylesheet_tag }}
     {% style %}
         @font-face {
             font-family: 'Vanitas';
             src: url('{{ "Vanitas-Regular.woff2" | asset_url }}') format('woff2');
             font-weight: normal;
+            font-display: swap;
             font-style: normal;
         }
         @font-face {
             font-family: 'Vanitas';
             src: url('{{ "Vanitas-Bold.woff2" | asset_url }}') format('woff2');
             font-weight: bold;
+            font-display: swap;
             font-style: normal;
-        }
-        
-        @font-face {
-          font-family: 'Heading-Now-71-Thin-trial';
-          src: url('{{ "Heading-Now-71-Thin-trial.woff2" | asset_url }}') format('woff2');
-          font-style: normal;
-        }
-        @font-face {
-          font-family: 'Heading-Now-73-Book-trial';
-          src: url('{{ "Heading-Now-73-Book-trial.woff2" | asset_url }}') format('woff2');
-          font-style: normal;
-        }
-      @import url("https://p.typekit.net/p.css?s=1&k=ugh3phh&ht=tk&f=139.171.173.175.5474.25136&a=86033199&app=typekit&e=css");
-      
+        }      
       @font-face {
         font-family:"proxima-nova";
         src:url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?subset_id=2&fvd=n7&v=3")
         format("woff2"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/d?subset_id=2&fvd=n7&v=3")
         format("woff"),url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/a?subset_id=2&fvd=n7&v=3")
         format("opentype");
-        font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+        font-display: swap;
+        font-style:normal;
+        font-weight:700;
+        font-stretch:normal;
       }
       
       @font-face {
@@ -130,7 +97,7 @@
         format("woff2"),url("https://use.typekit.net/af/154cda/00000000000000007735e601/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3")
         format("woff"),url("https://use.typekit.net/af/154cda/00000000000000007735e601/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3")
         format("opentype");
-        font-display:auto;font-style:normal;font-weight:100;font-stretch:normal;
+        font-display: swap;font-style:normal;font-weight:100;font-stretch:normal;
       }
       
       @font-face {
@@ -139,7 +106,7 @@
         format("woff2"),url("https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/d?subset_id=2&fvd=n6&v=3")
         format("woff"),url("https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/a?subset_id=2&fvd=n6&v=3")
         format("opentype");
-        font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+        font-display: swap;font-style:normal;font-weight:600;font-stretch:normal;
       }
       
       @font-face {
@@ -148,7 +115,7 @@
         format("woff2"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/d?subset_id=2&fvd=n4&v=3")
         format("woff"),url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/a?subset_id=2&fvd=n4&v=3")
         format("opentype");
-        font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+        font-display: swap;font-style:normal;font-weight:400;font-stretch:normal;
       }
       
       @font-face {
@@ -157,7 +124,7 @@
         format("woff2"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/d?subset_id=2&fvd=n3&v=3")
         format("woff"),url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/a?subset_id=2&fvd=n3&v=3")
         format("opentype");
-        font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
+        font-display: swap;font-style:normal;font-weight:300;font-stretch:normal;
       }
       
       @font-face {
@@ -166,7 +133,7 @@
         format("woff2"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/d?subset_id=2&fvd=n5&v=3")
         format("woff"),url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/a?subset_id=2&fvd=n5&v=3")
         format("opentype");
-        font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+        font-display: swap;font-style:normal;font-weight:500;font-stretch:normal;
       }
       
       .tk-proxima-nova { font-family: "proxima-nova",sans-serif; }
@@ -378,7 +345,10 @@
         }
       }
     {% endstyle %}
-
+    <link rel="preload" href="{{ 'base.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
+    </noscript>
     <link rel="stylesheet" href="{{ 'splide.min.css' | asset_url }}" media="print" onload="this.media='all'">
     <noscript>
       {{ 'splide.min.css' | asset_url | stylesheet_tag }}
@@ -409,19 +379,6 @@
       >
     {%- endif -%}
 
-    <script>
-      if (Shopify.designMode) {
-        document.documentElement.classList.add('shopify-design-mode');
-      }
-    </script>
-
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "n8qngnat6i");
-    </script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -574,13 +531,24 @@
     <!-- End of Zapiet code -->
     {% render 'boost-sd-fallback' %}
     {%- render 'iubenda', get: 'cookie-policy' -%}
-    <script src="{{ "splide.min.js" | asset_url }}" defer></script>
-    <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script>
-      Defer.all('script[type="lazy-script"]', 0, true);
+      window.sweet = window.sweet || {}, window.sweet.q = sweet.q || [],
+        window.sweet.init = function (e) { this.cid = e; },
+        window.sweet.track = function () { this.q.push(arguments) }; var a = document.createElement("script"),
+          m = document.getElementsByTagName("script")[0];
+      a.async = 1, a.src = "https://track.sweetanalytics.com/sweet.min.js", m.parentNode.insertBefore(a, m);
+      sweet.init('AT-6176d2947f3e0');
+      sweet.track('pageview', 1);
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "n8qngnat6i");
     </script>
   </body>
 </html>
