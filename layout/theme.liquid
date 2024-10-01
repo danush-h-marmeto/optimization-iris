@@ -349,10 +349,6 @@
     <noscript>
       <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
     </noscript>
-    <link rel="stylesheet" href="{{ 'splide.min.css' | asset_url }}" media="print" onload="this.media='all'">
-    <noscript>
-      {{ 'splide.min.css' | asset_url | stylesheet_tag }}
-    </noscript>
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -382,49 +378,16 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ 'accessibility.skip_to_text' | t }}
-    </a>
-    {% if request.page_type == 'index' %}
-        <script>
-          let componentCartCss = "{{ 'component-cart.css' | asset_url }}";
-          let componentCardCss = "{{'component-card.css' |  asset_url}}";
-          let componentTotalCss = "{{ 'component-totals.css' | asset_url }}";
-          let componentPriceCss = "{{ 'component-price.css' | asset_url }}";
-          let quantityPopover = "{{'quantity-popover.css' | asset_url}}"
-          let componentDiscountCss = "{{ 'component-discounts.css' | asset_url }}";
-          Defer.css(quantityPopover, 'quantityPopover', 0 , function() {} )
-          Defer.css(componentCardCss, 'component-card-css',0, function () { })
-          Defer.css(componentCartCss, 'component-cart-css', 0, function () { });
-          Defer.css(componentTotalCss, 'component-totals-css', 0, function () { });
-          Defer.css(componentPriceCss, 'component-price-css', 0, function () { });
-          Defer.css(componentDiscountCss, 'component-discounts-css', 0, function () { });
-        </script>
-        {% else %}
-        {{ 'component-cart.css' | asset_url | stylesheet_tag }}
-        {{ 'component-totals.css' | asset_url | stylesheet_tag }}
-        {{ 'component-price.css' | asset_url | stylesheet_tag }}
-        {{ 'component-card.css' | asset_url | stylesheet_tag }}
-        {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
-    {% endif %}
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
-
     {% sections 'header-group' %}
-
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
     {% render 'whats-this-popup' %}
     <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {% sections 'footer-group' %}
-
-    <ul hidden>
-      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
-      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
-    </ul>
-
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
@@ -529,8 +492,7 @@
       }
     </script>
     <!-- End of Zapiet code -->
-    {% render 'boost-sd-fallback' %}
-    {%- render 'iubenda', get: 'cookie-policy' -%}
+    {% comment %} {%- render 'iubenda', get: 'cookie-policy' -%} {% endcomment %}
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
