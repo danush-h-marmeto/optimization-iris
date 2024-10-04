@@ -362,8 +362,6 @@
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print"
         onload="this.media='all'">
     {%- endif -%}
-    
-
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -384,13 +382,13 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-    {%- if template.name == 'product' -%}
-      {% render 'whats-this-popup' %}
-      <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
-    {%- endif -%}
     {% sections 'footer-group' %}
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
+    {%- endif -%}
+    {%- if template.name == 'product' -%}
+      {% render 'whats-this-popup' %}
+      <script type="lazy-script" src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {%- endif -%}
     <script>
       window.shopUrl = '{{ request.origin }}';
@@ -501,10 +499,10 @@
       })(window, document, "clarity", "script", "n8qngnat6i");
     </script>
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+      <script type="lazy-script" src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      <script type="lazy-script" src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
 </html>

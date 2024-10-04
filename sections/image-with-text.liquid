@@ -7,7 +7,7 @@
   {% endif %}
 {% if lazy_load_section == blank %}
 
-{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
