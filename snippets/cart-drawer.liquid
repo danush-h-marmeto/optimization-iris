@@ -4,7 +4,6 @@
   Usage:
   {% render 'cart-drawer' %}
 {% endcomment %}
-{{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
@@ -310,7 +309,7 @@
               <div class="cart-usp--inner">
                  {% if settings.cart_usp_icon_1 != blank %}
                  <div class="cart-usp--img">
-                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_1 %}
+                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_1, loading:'lazy', fetchpriority:'low' %}
                  </div>
                  {% endif %}
                  {% if settings.cart_usp_icon_label_1 != blank %}
@@ -333,7 +332,7 @@
               <div class="cart-usp--inner">
                  {% if settings.cart_usp_icon_2 != blank %}
                  <div class="cart-usp--img">
-                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_2 %}
+                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_2, loading:'lazy', fetchpriority:'low' %}
                  </div>
                  {% endif %}
                  {% if settings.cart_usp_icon_label_2 != blank %}
@@ -356,7 +355,7 @@
               <div class="cart-usp--inner">
                  {% if settings.cart_usp_icon_3 != blank %}
                  <div class="cart-usp--img">
-                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_3 %}
+                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_3, loading:'lazy', fetchpriority:'low' %}
                  </div>
                  {% endif %}
                  {% if settings.cart_usp_icon_label_3 != blank %}
@@ -390,11 +389,6 @@
            >
            {{ 'sections.cart.checkout' | t }}
            </a>
-           {%- if additional_checkout_buttons -%}
-           <div class="desktop-hidden cart__dynamic-checkout-buttons additional-checkout-buttons">
-              {{ content_for_additional_checkout_buttons }}
-           </div>
-           {%- endif -%}
            <button
               class="cart-continue--shopping"
               type="button"

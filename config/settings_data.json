@@ -2,6 +2,8 @@
   "current": {
     "preload_image_desktop": "shopify:\/\/shop_images\/HP_Frances_v2.png",
     "preload_image_mobile": "shopify:\/\/shop_images\/HP_FRANCES_V2.jpg",
+    "enable_lazy_loading_sections": true,
+    "hp_eager_section_count": 5,
     "logo": "shopify:\/\/shop_images\/IRIS_logo_BURGUNDY_CMYK_1.png",
     "logo_width": 100,
     "favicon": "shopify:\/\/shop_images\/Favicon_bw.png",

@@ -15,9 +15,8 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-    <link rel="preload" href="https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?subset_id=2&fvd=n4&v=3"
-          as="font" type="font/woff2" crossorigin="anonymous">
-
+    {% render 'preload-lcp' %}
+    <link rel="preload" href="https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?subset_id=2&fvd=n4&v=3" as="font" type="font/woff2" crossorigin="anonymous">
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -30,30 +29,25 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    {% render 'preload-lcp' %}
-    {% comment %} {%- render 'spdn'-%} {% endcomment %}
     {% render 'defer.js' %}
     <script>
       Defer.all('script[type="lazy-script"]', 0, true);
     </script>
-    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <!-- content for header -->
     {%- capture head_content -%}{{ content_for_header }}{%- endcapture -%}
     {% case template %}
-    {% when 'index' %}
-      {{-
-        head_content
+      {% when 'index' %}
+        {{-
+          head_content
           | remove: 'https:\/\/d23dclunsivw3h.cloudfront.net\/redirect-app.js?shop=iris-fashion-esc.myshopify.com'
           | remove: 'https:\/\/cdn.fera.ai\/js\/fera.placeholder.js?shop=iris-fashion-esc.myshopify.com'
           | remove: '\/\/app.backinstock.org\/widget\/45449_1675166358.js?category=bis\u0026v=6\u0026shop=iris-fashion-esc.myshopify.com'
           | remove: 'https:\/\/wishlists-scripts.esc-apps-cdn.com\/iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com'
-          | remove: 'https:\/\/size-guides.esc-apps-cdn.com\/1714741288-app.iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com' 
-          | remove: 'https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=XZcwPx\u0026shop=iris-fashion-esc.myshopify.com' 
-      -}}
-    {% else %}
-      {{- content_for_header -}}
+          | remove: 'https:\/\/size-guides.esc-apps-cdn.com\/1714741288-app.iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com'
+          | remove: 'https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=XZcwPx\u0026shop=iris-fashion-esc.myshopify.com'
+        -}}
+      {% else %}
+        {{- content_for_header -}}
     {% endcase %}
     <!-- content for header -->
 
@@ -79,7 +73,7 @@
             font-weight: bold;
             font-display: swap;
             font-style: normal;
-        }      
+        }
       @font-face {
         font-family:"proxima-nova";
         src:url("https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?subset_id=2&fvd=n7&v=3")
@@ -91,7 +85,7 @@
         font-weight:700;
         font-stretch:normal;
       }
-      
+
       @font-face {
         font-family:"proxima-nova";
         src:url("https://use.typekit.net/af/154cda/00000000000000007735e601/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3")
@@ -100,7 +94,7 @@
         format("opentype");
         font-display: swap;font-style:normal;font-weight:100;font-stretch:normal;
       }
-      
+
       @font-face {
         font-family:"proxima-nova";
         src:url("https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/l?subset_id=2&fvd=n6&v=3")
@@ -109,7 +103,7 @@
         format("opentype");
         font-display: swap;font-style:normal;font-weight:600;font-stretch:normal;
       }
-      
+
       @font-face {
         font-family:"proxima-nova";
         src:url("https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?subset_id=2&fvd=n4&v=3")
@@ -118,7 +112,7 @@
         format("opentype");
         font-display: swap;font-style:normal;font-weight:400;font-stretch:normal;
       }
-      
+
       @font-face {
         font-family:"proxima-nova";
         src:url("https://use.typekit.net/af/1be3c2/00000000000000007735e606/30/l?subset_id=2&fvd=n3&v=3")
@@ -127,7 +121,7 @@
         format("opentype");
         font-display: swap;font-style:normal;font-weight:300;font-stretch:normal;
       }
-      
+
       @font-face {
         font-family:"proxima-nova";
         src:url("https://use.typekit.net/af/23e139/00000000000000007735e605/30/l?subset_id=2&fvd=n5&v=3")
@@ -136,7 +130,7 @@
         format("opentype");
         font-display: swap;font-style:normal;font-weight:500;font-stretch:normal;
       }
-      
+
       .tk-proxima-nova { font-family: "proxima-nova",sans-serif; }
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -350,26 +344,25 @@
     <noscript>
       <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
     </noscript>
-    {%- if settings.cart_type == "drawer" -%}
-    <link rel="preload" href="{{ 'component-cart-drawer.css' | asset_url }}" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{ 'component-cart.css' | asset_url }}" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{ 'component-totals.css' | asset_url }}" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{ 'component-price.css' | asset_url }}" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{ 'component-discounts.css' | asset_url }}" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="{{ 'component-cart-drawer.css' | asset_url }}">
-      <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}">
-      <link rel="stylesheet" href="{{ 'component-totals.css' | asset_url }}">
-      <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}">
-      <link rel="stylesheet" href="{{ 'component-discounts.css' | asset_url }}">
-    </noscript>
-    
+    {%- if settings.cart_type == 'drawer' -%}
+      <link rel="preload" href="{{ 'component-cart-drawer.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="{{ 'component-cart.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="{{ 'component-totals.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="{{ 'component-price.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <link rel="preload" href="{{ 'component-discounts.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+        <link rel="stylesheet" href="{{ 'component-cart-drawer.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'component-totals.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'component-discounts.css' | asset_url }}">
+      </noscript>
     {%- endif -%}
+    {%- if settings.predictive_search_enabled -%}
+      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print"
+        onload="this.media='all'">
+    {%- endif -%}
+    
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -381,27 +374,12 @@
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
       {% comment %}theme-check-enable AssetPreload{% endcomment %}
     {%- endunless -%}
-
-    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-
-    {%- if settings.predictive_search_enabled -%}
-      <link
-        rel="stylesheet"
-        href="{{ 'component-predictive-search.css' | asset_url }}"
-        media="print"
-        onload="this.media='all'"
-      >
-    {%- endif -%}
-
+    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
     {% sections 'header-group' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -411,6 +389,9 @@
       <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {%- endif -%}
     {% sections 'footer-group' %}
+    {%- if settings.cart_type == 'drawer' -%}
+      {%- render 'cart-drawer' -%}
+    {%- endif -%}
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
@@ -483,18 +464,12 @@
           document.getElementsByTagName("head")[0].appendChild(sc);},15);
       })();
     </script>
-    <!-- End Ometria script -->
-
-    <!-- Start Microsoft Advertising UET tag tracking code -->
+    {% comment %} <!-- Start Microsoft Advertising UET tag tracking code -->{% endcomment %}
     <script>
       (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"17540634"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
     </script>
-    <!-- End Microsoft Advertising UET tag tracking code -->
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-
-    <!-- Start Zapiet code -->
+    {% comment %} <!-- End Microsoft Advertising UET tag tracking code -->{% endcomment %}
+    {% comment %}<!-- Start Zapiet code -->{% endcomment %}
     <script>
       window.zapietThemeConfig = {
         properties: {
@@ -504,7 +479,7 @@
         }
       }
     </script>
-    <!-- End of Zapiet code -->
+    {% comment %} <!-- End of Zapiet code --> {% endcomment %}
     {% comment %} {%- render 'iubenda', get: 'cookie-policy' -%} {% endcomment %}
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
@@ -525,5 +500,11 @@
         y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "n8qngnat6i");
     </script>
+    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
   </body>
 </html>
