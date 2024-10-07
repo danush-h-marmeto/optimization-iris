@@ -63,9 +63,9 @@
     height="{{ desktopImage.width | divided_by: desktopImage.aspect_ratio | round }}"
   >
   <img
-    src="{{ desktopImage | image_url: width: 1500 }}"
     loading="{{ loading }}"
     fetchpriority="{{fetchpriority}}"
+    data-src="{{ desktopImage | image_url: width: 1500 }}"
     width="{{ desktopImage.width }}"
     height="{{ desktopImage.width | divided_by: desktopImage.aspect_ratio | round }}"
     alt="{{ alt | default: desktopImage.alt | escape }}"
