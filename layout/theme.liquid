@@ -52,7 +52,6 @@
       {%- render 'hp-critical-css' -%}
     {%- endif -%}
     {%- render 'head-styles' -%}
-    {% comment %} {% render 'defer.js' %} {% endcomment %}
     <script type="lazy-script" src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script type="lazy-script" src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script type="lazy-script" src="{{ 'global.js' | asset_url }}" defer="defer"></script>

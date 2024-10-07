@@ -229,10 +229,15 @@
               <div class="block__item" onmouseover="ActiveMegaMenuItem('{{ block.settings.link_text |  handleize }}')" onmouseout="InactiveMegaMenuItem('{{ block.settings.link_text |  handleize }}')" data-menu-title="{{ block.settings.link_text |  handleize }}" {{ block.shopify_attributes }}>
                 <a href="{{ block.settings.link_url }}" class="menuitem--link lazy-load-parent">
                    {% if block.settings.link_image != blank %}
+                    {% assign image_width = block.settings.link_image.width %}
+                    {% assign image_height = block.settings.link_image.height %}
+                    {% assign aspect_ratio = image_width | divided_by: image_height %}
                     <img class="deferimg media megamenu-image--wrapper" 
                          loading="lazy" 
                          src="{{ block.settings.link_image | img_url: 'master' }}"  
-                         data-src="{{ block.settings.link_image | img_url: 'master' }}" 
+                         data-src="{{ block.settings.link_image | img_url: 'master' }}"
+                         width="{{ image_width }}" 
+                         height="{{ image_width | divided_by: aspect_ratio | round }}" 
                          alt="{{ block.settings.link_text | escape }}">
                   {% endif %}
                   <h2 class="menuitem--heading">{{ block.settings.link_text }}</h2>

@@ -6,10 +6,20 @@
 <lazy-section>
   {% endif %}
 {% if lazy_load_section == blank %}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+  {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+</noscript>
+<link rel="preload" href="{{ 'component-card.css' | asset_url }}" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+</noscript>
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+</noscript>
 
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
 {% assign count = 0 %}
 {%- unless section.settings.enable_animation -%}
@@ -18,7 +28,10 @@
 
 {% if section.settings.enable_animation %}
   <script src="{{'animation.js' |  asset_url}}" defer></script>
-  {{ 'animation.css' |  asset_url |  stylesheet_tag }}
+  <link rel="stylesheet" href="{{ 'animation.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>
+    {{ 'animation.css' | asset_url | stylesheet_tag }}
+  </noscript>
 {% endif %}
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
