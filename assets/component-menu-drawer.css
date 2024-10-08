@@ -263,9 +263,9 @@ details[open].menu-opening > .menu-drawer__submenu {
     margin: 1.5rem 5.5rem;
   }
   .media.megamenu-image--wrapper {
+    object-fit: cover;
     height: 155px;
     width: 240px;
-    padding: 1.5rem;
     margin-right: 0;
   }
   .mega-menu--images {

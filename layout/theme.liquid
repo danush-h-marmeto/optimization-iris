@@ -52,9 +52,13 @@
       {%- render 'hp-critical-css' -%}
     {%- endif -%}
     {%- render 'head-styles' -%}
-    <script type="lazy-script" src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
-    <script type="lazy-script" src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
-    <script type="lazy-script" src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+        <!-- Preload the script -->
+    <link rel="preload" href="{{ 'splide.min.js' | asset_url }}" as="script">
+    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{'splide.min.js' |  asset_url}}" defer></script>
+    <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -158,7 +162,6 @@
       }
     </script>
     {% comment %} <!-- End of Zapiet code --> {% endcomment %}
-    <script src="https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js" defer></script>
     <script>
       window.sweet = window.sweet || {}, window.sweet.q = sweet.q || [],
         window.sweet.init = function (e) { this.cid = e; },
@@ -185,13 +188,5 @@
     {%- if settings.animations_reveal_on_scroll -%}
         <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script src="{{'splide.min.js' |  asset_url}}" defer></script>
-    <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        Defer.all('script[type="lazy-script"]', 0, true);
-        Defer.dom('.lazy-load-parent img.deferimg');
-      });
-    </script>
   </body>
 </html>

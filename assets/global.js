@@ -2017,3 +2017,37 @@ customElements.define(
   "javascript-injected-section-hamburger",
   JavaScriptInjectedSectionHamburger
 );
+// Function to lazy load an image
+function lazyLoadImage(image) {
+  const dataSrc = image.getAttribute('data-src');
+  if (dataSrc) {
+    image.src = dataSrc;  // Set the src attribute to load the image
+    image.removeAttribute('data-src');  // Remove the data-src once loaded
+  }
+}
+
+// Create a new IntersectionObserver instance
+const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const image = entry.target;
+      lazyLoadImage(image);  // Load the image when in view
+      lazyImageObserver.unobserve(image);  // Stop observing after the image is loaded
+    }
+  });
+});
+
+// Select all lazy-load images and observe them
+document.addEventListener('DOMContentLoaded', function() {
+  const lazyImages = document.querySelectorAll('.lazy-load-image');
+  if ('IntersectionObserver' in window) {
+    lazyImages.forEach(image => {
+      lazyImageObserver.observe(image);
+    });
+  } else {
+    // Fallback for older browsers: Load all images immediately
+    lazyImages.forEach(image => {
+      lazyLoadImage(image);
+    });
+  }
+});

@@ -6,7 +6,6 @@
 <lazy-section>
   {% endif %}
 {% if lazy_load_section == blank %}
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image != blank -%}
   {%- style -%}

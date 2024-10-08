@@ -309,7 +309,12 @@
               <div class="cart-usp--inner">
                  {% if settings.cart_usp_icon_1 != blank %}
                  <div class="cart-usp--img">
-                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_1, loading:'lazy', fetchpriority:'low' %}
+                     {% assign image_width = settings.cart_usp_icon_1.width %}
+                     {% assign image_height = settings.cart_usp_icon_1.height %}
+                     {% assign aspect_ratio = image_width | divided_by: image_height %}
+                     <img class="deferimg lazy-load-image" loading="lazy"
+                        data-src="{{ settings.cart_usp_icon_1 | img_url: 'master' }}" width="{{ image_width }}"
+                        height="{{ image_width | divided_by: aspect_ratio | round }}" alt="{{ settings.cart_usp_icon_1.alt | escape }}">
                  </div>
                  {% endif %}
                  {% if settings.cart_usp_icon_label_1 != blank %}
@@ -332,7 +337,12 @@
               <div class="cart-usp--inner">
                  {% if settings.cart_usp_icon_2 != blank %}
                  <div class="cart-usp--img">
-                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_2, loading:'lazy', fetchpriority:'low' %}
+                  {% assign image_width = settings.cart_usp_icon_2.width %}
+                  {% assign image_height = settings.cart_usp_icon_2.height %}
+                  {% assign aspect_ratio = image_width | divided_by: image_height %}
+                  <img class="deferimg lazy-load-image" loading="lazy" data-src="{{ settings.cart_usp_icon_1 | img_url: 'master' }}"
+                     width="{{ image_width }}" height="{{ image_width | divided_by: aspect_ratio | round }}"
+                     alt="{{ settings.cart_usp_icon_2.alt | escape }}">
                  </div>
                  {% endif %}
                  {% if settings.cart_usp_icon_label_2 != blank %}
@@ -355,7 +365,12 @@
               <div class="cart-usp--inner">
                  {% if settings.cart_usp_icon_3 != blank %}
                  <div class="cart-usp--img">
-                    {% render 'responsive-picture', desktopImage: settings.cart_usp_icon_3, loading:'lazy', fetchpriority:'low' %}
+                  {% assign image_width = settings.cart_usp_icon_3.width %}
+                  {% assign image_height = settings.cart_usp_icon_3.height %}
+                  {% assign aspect_ratio = image_width | divided_by: image_height %}
+                  <img class="deferimg lazy-load-image" loading="lazy" data-src="{{ settings.cart_usp_icon_1 | img_url: 'master' }}"
+                     width="{{ image_width }}" height="{{ image_width | divided_by: aspect_ratio | round }}"
+                     alt="{{ settings.cart_usp_icon_3.alt | escape }}">
                  </div>
                  {% endif %}
                  {% if settings.cart_usp_icon_label_3 != blank %}
