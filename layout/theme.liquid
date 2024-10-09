@@ -29,7 +29,6 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    {% comment %} {%- render 'spdn' -%} {% endcomment %}
     {%- render 'theme-variables' -%}
     {%- if template.name == 'index' -%}
       {%- render 'hp-critical-css' -%}
@@ -67,6 +66,8 @@
       <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+      <script src="{{'splide.min.js' |  asset_url}}" defer></script>
+      <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -196,7 +197,5 @@
     {%- if settings.animations_reveal_on_scroll -%}
         <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script src="{{'splide.min.js' |  asset_url}}" defer></script>
-    <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
   </body>
 </html>

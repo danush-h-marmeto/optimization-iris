@@ -1,3 +1,11 @@
+{%- capture lazy_load_section %}
+{%- render 'lazy-load-section-validations' -%}
+{%- endcapture -%}
+
+{% if lazy_load_section != blank %}
+<lazy-section>
+  {% endif %}
+  {% if lazy_load_section == blank %}
 {%- comment -%} Back in Stock notification display logic {%- endcomment -%}
 {% assign has_unavailable_variant = false %}
 {% for variant in product.variants %}
@@ -6,7 +14,6 @@
     {% break %}
   {% endif %}
 {% endfor %}
-<script src="{{ 'custom.js' |  asset_url }}" defer></script>
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -44,6 +51,7 @@
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'singleproduct.js'|  asset_url }}" defer></script>
+  <script src="{{ 'custom.js' |  asset_url }}" defer></script>
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
@@ -843,6 +851,13 @@
     </script>
   </div>
 </section>
+{% else %}
+  {%- render 'lazy-spinner' -%}
+{% endif %}
+
+{% if lazy_load_section != blank %}
+  </lazy-section>
+{% endif %}
 
 {% schema %}
 {
