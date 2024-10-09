@@ -335,3 +335,34 @@
     </slider-component>
   {%- endif -%}
 </media-gallery>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all images with the class 'lazy-image'
+    const lazyImages = document.querySelectorAll('img.lazy-image');
+
+    // Function to load the image
+    const loadImage = (image) => {
+      image.src = image.dataset.src;
+      image.removeAttribute("loading");
+      image.classList.remove('lazy-image'); // Optionally remove the lazy-image class after loading
+    };
+
+    // Create an IntersectionObserver
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          let img = entry.target;
+          loadImage(img);
+          observer.unobserve(img); // Stop observing once image is loaded
+        }
+      });
+    });
+
+    // Apply observer to each lazy image
+    lazyImages.forEach(image => {
+      observer.observe(image);
+    });
+  });
+
+
+</script>

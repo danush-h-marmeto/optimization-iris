@@ -3,7 +3,7 @@
     "preload_image_desktop": "shopify:\/\/shop_images\/HP_Frances_v2.png",
     "preload_image_mobile": "shopify:\/\/shop_images\/HP_FRANCES_V2.jpg",
     "enable_lazy_loading_sections": true,
-    "hp_eager_section_count": 5,
+    "hp_eager_section_count": 8,
     "logo": "shopify:\/\/shop_images\/IRIS_logo_BURGUNDY_CMYK_1.png",
     "logo_width": 100,
     "favicon": "shopify:\/\/shop_images\/Favicon_bw.png",
@@ -176,12 +176,6 @@
 
     ],
     "blocks": {
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "4372474792694305445": {
         "type": "shopify:\/\/apps\/also-bought\/blocks\/app-embed-block\/b94b27b4-738d-4d92-9e60-43c22d1da3f2",
         "disabled": false,
@@ -190,12 +184,6 @@
       },
       "4275615285897611771": {
         "type": "shopify:\/\/apps\/fera\/blocks\/embed\/2fbfcfa7-8a04-479f-89a8-0621fa099c51",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "14479319785270113485": {
-        "type": "shopify:\/\/apps\/zapiet-pick-delivery\/blocks\/app-embed\/5599aff0-8af1-473a-a372-ecd72a32b4d5",
         "disabled": false,
         "settings": {
         }
@@ -217,6 +205,18 @@
         "disabled": true,
         "settings": {
           "templateId": ""
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14479319785270113485": {
+        "type": "shopify:\/\/apps\/zapiet-pickup-delivery\/blocks\/app-embed\/5599aff0-8af1-473a-a372-ecd72a32b4d5",
+        "disabled": true,
+        "settings": {
         }
       }
     },

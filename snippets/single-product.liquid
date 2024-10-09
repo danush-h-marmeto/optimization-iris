@@ -9,23 +9,9 @@
             {% else %}
                 {% assign single_product_sizes = '(max-width: 768px) calc(50vw - 20px), (min-width: 769px) and (max-width: 1024px) 33vw, calc(25vw - 15px)' %}
             {% endif %}
-
-            {%- if image -%}
-                {% render 'responsive-picture',
-                    desktopImage: image,
-                    mobileSize: single_product_sizes %}
-            {%- else -%}
-                {% render 'responsive-picture',
-                    desktopImage: product.featured_image,
-                    mobileSize: single_product_sizes %}
-            {%- elsif product.images.size > 1 -%}
-                {% render 'responsive-picture',
-                    desktopImage: product.images[1],
-                    mobileSize: single_product_sizes %}
-            {%- endif -%}
+            <img class="lazy-load-image" data-src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt | escape }}">
         </a>
         {%- unless class contains 'single-product__sm' -%}
-            {% comment %} {%- include 'product-wishlist', class: 'single-product__wishlist' -%} {% endcomment %}
             {%- render 'product-variant-links', class: 'single-product__variants' -%}
         {%- endunless -%}
         {%- if include_atc == true -%}

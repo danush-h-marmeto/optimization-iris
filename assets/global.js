@@ -2017,36 +2017,47 @@ customElements.define(
   "javascript-injected-section-hamburger",
   JavaScriptInjectedSectionHamburger
 );
-// Function to lazy load an image
 function lazyLoadImage(image) {
-  const dataSrc = image.getAttribute('data-src');
+  const dataSrc = image.getAttribute("data-src");
   if (dataSrc) {
-    image.src = dataSrc;  // Set the src attribute to load the image
-    image.removeAttribute('data-src');  // Remove the data-src once loaded
+    image.src = dataSrc; // Set the src attribute to load the image
+
+    // Conditionally remove shimmer effect when the image is fully loaded
+    image.onload = () => {
+      // Check for a specific condition (e.g., a specific class or data attribute)
+      if (image.classList.contains("remove-shimmer-on-load")) {
+        const container = image.closest(".lazy-load-container");
+        if (container) {
+          container.classList.remove("shimmer");
+        }
+        image.classList.add("image-loaded");
+      }
+    };
+
+    image.removeAttribute("data-src"); // Remove the data-src once loaded
   }
 }
 
 // Create a new IntersectionObserver instance
 const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const image = entry.target;
-      lazyLoadImage(image);  // Load the image when in view
-      lazyImageObserver.unobserve(image);  // Stop observing after the image is loaded
+      lazyLoadImage(image); // Load the image when in view
+      lazyImageObserver.unobserve(image); // Stop observing after the image is loaded
     }
   });
 });
 
-// Select all lazy-load images and observe them
-document.addEventListener('DOMContentLoaded', function() {
-  const lazyImages = document.querySelectorAll('.lazy-load-image');
-  if ('IntersectionObserver' in window) {
-    lazyImages.forEach(image => {
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll(".lazy-load-image");
+  if ("IntersectionObserver" in window) {
+    lazyImages.forEach((image) => {
       lazyImageObserver.observe(image);
     });
   } else {
     // Fallback for older browsers: Load all images immediately
-    lazyImages.forEach(image => {
+    lazyImages.forEach((image) => {
       lazyLoadImage(image);
     });
   }

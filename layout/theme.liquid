@@ -29,7 +29,16 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    <!-- content for header -->
+    {% comment %} {%- render 'spdn' -%} {% endcomment %}
+    {%- render 'theme-variables' -%}
+    {%- if template.name == 'index' -%}
+      {%- render 'hp-critical-css' -%}
+    {%- endif -%}
+    {%- if template.name == 'product' -%}
+      {%- render 'pd-critical-css' -%}
+    {%- endif -%}
+    {%- render 'head-styles' -%}
+      <!-- content for header -->
     {%- capture head_content -%}{{ content_for_header }}{%- endcapture -%}
     {% case template %}
       {% when 'index' %}
@@ -42,23 +51,22 @@
           | remove: 'https:\/\/size-guides.esc-apps-cdn.com\/1714741288-app.iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com'
           | remove: 'https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=XZcwPx\u0026shop=iris-fashion-esc.myshopify.com'
         -}}
+        {%- when 'product' -%}
+          {{-
+            head_content
+            | remove: 'https:\/\/d23dclunsivw3h.cloudfront.net\/redirect-app.js?shop=iris-fashion-esc.myshopify.com' 
+            | remove: 'https:\/\/shopify.covet.pics\/covet-pics-widget-inject.js?shop=iris-fashion-esc.myshopify.com'
+            | remove: 'https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=XZcwPx\u0026shop=iris-fashion-esc.myshopify.com'
+            | remove: 'https:\/\/wishlists-scripts.esc-apps-cdn.com\/iris-fashion-esc.myshopify.com.js?shop=iris-fashion-esc.myshopify.com'   
+            | remove: '\/\/app.backinstock.org\/widget\/45449_1675166358.js?category=bis\u0026v=6\u0026shop=iris-fashion-esc.myshopify.com' 
+          -}}
       {% else %}
         {{- content_for_header -}}
     {% endcase %}
     <!-- content for header -->
-
-    {%- render 'theme-variables' -%}
-    {%- if template.name == 'index' -%}
-      {%- render 'hp-critical-css' -%}
-    {%- endif -%}
-    {%- render 'head-styles' -%}
-        <!-- Preload the script -->
-    <link rel="preload" href="{{ 'splide.min.js' | asset_url }}" as="script">
-    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    <script src="{{'splide.min.js' |  asset_url}}" defer></script>
-    <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
+      <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -72,7 +80,7 @@
     {%- endif -%}
     {%- if template.name == 'product' -%}
       {% render 'whats-this-popup' %}
-      <script type="lazy-script" src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
+      <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {%- endif -%}
     <script>
       window.shopUrl = '{{ request.origin }}';
@@ -179,14 +187,16 @@
       })(window, document, "clarity", "script", "n8qngnat6i");
     </script>
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      <script type="lazy-script" src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {%- if settings.predictive_search_enabled -%}
-      <script type="lazy-script" src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {%- render 'iubenda', get: 'cookie-policy' -%}
     {%- if settings.animations_reveal_on_scroll -%}
         <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script src="{{'splide.min.js' |  asset_url}}" defer></script>
+    <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
   </body>
 </html>
