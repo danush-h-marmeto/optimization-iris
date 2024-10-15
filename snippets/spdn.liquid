@@ -16,7 +16,6 @@
                         || node.id == "shopify-features"
                         || node.id == '__st'
                         || node.src.includes('cdn.shopify')
-                        || node.src.includes('splide.min')
                         || node.src.includes('jquery')
                     ) {
                         node.type = 'text/javascript'
@@ -28,7 +27,6 @@
 
                         node.type = 'text/spdnscript'
                     }
-                    console.log(node);
                 }
 
             })

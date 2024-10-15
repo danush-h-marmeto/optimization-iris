@@ -1,3 +1,40 @@
+  header-drawer {
+    justify-self: start;
+    margin-left: -1.2rem;
+  }
+    .menu-drawer-container {
+    display: flex;
+  }
+
+  .list-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-menu--inline {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+
+
+  .list-menu__item {
+    display: flex;
+    align-items: center;
+    line-height: calc(1 + 0.3 / var(--font-body-scale));
+  }
+
+  .list-menu__item--link {
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.33;
+    margin-top: 28px;
+  }
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;

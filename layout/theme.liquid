@@ -63,11 +63,12 @@
         {{- content_for_header -}}
     {% endcase %}
     <!-- content for header -->
+     {%- render 'defer.js'-%}
       <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-      <script src="{{'splide.min.js' |  asset_url}}" defer></script>
-      <script src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
+      <script type="lazy-script" src="{{'splide.min.js' |  asset_url}}" defer></script>
+      <script type="lazy-script" src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -190,12 +191,22 @@
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
-    {%- render 'iubenda', get: 'cookie-policy' -%}
     {%- if settings.animations_reveal_on_scroll -%}
         <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+    <script src="{{  'cart.js' |  asset_url}}" defer></script>
+    {%- if settings.cart_type == "drawer" -%}
+      <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    <script>
+      Defer.all('script[type="lazy-script"]', 0, true);
+    </script>
   </body>
 </html>

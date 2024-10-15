@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -44,7 +44,7 @@
         "buttons_37qVHN"
       ],
       "settings": {
-        "image": "shopify://shop_images/HP_Wk27_v2.jpg",
+        "image": "shopify://shop_images/HP_Wk27_v2_5726aabe-5ced-40c4-8dec-a8b2506753c2.jpg",
         "mobile_image": "shopify://shop_images/HP_FRANCES_V2.jpg",
         "banner_url": "shopify://collections/by-iris-new-in",
         "image_overlay_opacity": 0,
@@ -168,22 +168,22 @@
         "heading_hqtqfh": {
           "type": "heading",
           "settings": {
-            "heading": "Hot Chocolate",
+            "heading": "Printed Satin",
             "heading_size": "h0"
           }
         },
         "text_YeyFdT": {
           "type": "text",
           "settings": {
-            "text": "<p>It's the colour of the season: chocolate brown has been making itself known in every corner of the fashion world, warming up the AW24 runways and bringing that element of quiet luxury to every fashion editor's top picks for fall. Shop the edit below.</p>",
-            "text_style": "body"
+            "text": "<p>Discover the luxe feel and easy glamour of our printed satin capsule collection</p>",
+            "text_style": "subtitle"
           }
         },
         "button_Vjp47A": {
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/chocolate",
+            "button_link": "shopify://collections/the-satin-collection",
             "button_style_secondary": false
           }
         }
@@ -194,7 +194,7 @@
         "button_Vjp47A"
       ],
       "settings": {
-        "image": "shopify://shop_images/fe9540b94d6f7791af64e538dbca7950.jpg",
+        "image": "shopify://shop_images/7577782db03c567fa4557ab842cbf41c.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -216,25 +216,25 @@
         "product_FUeXU8": {
           "type": "product",
           "settings": {
-            "product_item": "padow-cord-trousers-chocolate"
+            "product_item": "alice-satin-printed-maxi-skirt-navy"
           }
         },
         "product_PFh7Mg": {
           "type": "product",
           "settings": {
-            "product_item": "mary-jane-velvet-shoe-brown"
+            "product_item": "nixi-satin-dress-navy"
           }
         },
         "product_UpzwNw": {
           "type": "product",
           "settings": {
-            "product_item": "collar-shirt-cream"
+            "product_item": "seren-printed-satin-dress-indigo"
           }
         },
         "product_8JUeHE": {
           "type": "product",
           "settings": {
-            "product_item": "lucca-crew-neck-tank-knit-chocolate"
+            "product_item": "imani-print-blouse-indigo"
           }
         }
       },
@@ -346,7 +346,7 @@
         "button_LJwUJ8"
       ],
       "settings": {
-        "image": "shopify://shop_images/5cfea68d579666072150126a5f6f8be0.jpg",
+        "image": "shopify://shop_images/2a928f1678dd61765b1c4439d5c399da.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -368,33 +368,33 @@
         "product_rmJrqU": {
           "type": "product",
           "settings": {
-            "product_item": "faizae-printed-blouse-beige"
-          }
-        },
-        "product_bW3eCy": {
-          "type": "product",
-          "settings": {
-            "product_item": "luca-wide-trouser-black-1"
-          }
-        },
-        "product_awa77Q": {
-          "type": "product",
-          "settings": {
-            "product_item": "mali-suede-boot-camel"
+            "product_item": "audrey-blouse-brown"
           }
         },
         "product_TPVrUW": {
           "type": "product",
           "settings": {
-            "product_item": "gaspard-cropped-cardigan-chocolate"
+            "product_item": "dalida-embroidered-dress-navy"
+          }
+        },
+        "product_awa77Q": {
+          "type": "product",
+          "settings": {
+            "product_item": "wilson-print-jacket-multi"
+          }
+        },
+        "product_bW3eCy": {
+          "type": "product",
+          "settings": {
+            "product_item": "layla-smock-maxi-dress-rust"
           }
         }
       },
       "block_order": [
         "product_rmJrqU",
-        "product_bW3eCy",
+        "product_TPVrUW",
         "product_awa77Q",
-        "product_TPVrUW"
+        "product_bW3eCy"
       ],
       "settings": {
         "title": "",
