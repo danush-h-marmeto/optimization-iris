@@ -200,11 +200,6 @@
   text-decoration: none;
   color: inherit;
 }
-@media screen and (max-width: 749px) {
-  .product-card--vendor {
-    font-size: 16px;
-  }
-}
 
 @media (min-width: 749px) {
   .product-variants__values .product-variants__value:hover {

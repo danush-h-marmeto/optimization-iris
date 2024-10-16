@@ -38,6 +38,9 @@
     {%- endif -%}
     {%- render 'head-styles' -%}
       <!-- content for header -->
+    {%- if template.name == 'index' -%}
+      {%- render 'spdn' -%}
+    {%- endif -%}
     {%- capture head_content -%}{{ content_for_header }}{%- endcapture -%}
     {% case template %}
       {% when 'index' %}
@@ -67,8 +70,6 @@
       <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-      <script type="lazy-script" src="{{'splide.min.js' |  asset_url}}" defer></script>
-      <script type="lazy-script" src="{{ 'splide-slider.js' |  asset_url }}" defer></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -79,10 +80,6 @@
     {% sections 'footer-group' %}
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
-    {%- endif -%}
-    {%- if template.name == 'product' -%}
-      {% render 'whats-this-popup' %}
-      <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {%- endif -%}
     <script>
       window.shopUrl = '{{ request.origin }}';
@@ -204,6 +201,11 @@
     {%- endif -%}
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    <script src="{{'animation.js' |  asset_url}}" defer></script>
+    {%- if template.name == 'product' -%}
+      {% render 'whats-this-popup' %}
+      <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {%- endif -%}
     <script>
       Defer.all('script[type="lazy-script"]', 0, true);

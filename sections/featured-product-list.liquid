@@ -27,7 +27,6 @@
 {%- endunless -%}
 
 {% if section.settings.enable_animation %}
-  <script src="{{'animation.js' |  asset_url}}" defer></script>
   <link rel="stylesheet" href="{{ 'animation.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>
     {{ 'animation.css' | asset_url | stylesheet_tag }}

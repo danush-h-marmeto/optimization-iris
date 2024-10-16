@@ -2062,3 +2062,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("click", function (event) {
+  const drawerContainer = document.querySelector(
+    "#Details-menu-drawer-container"
+  );
+  const drawer = document.querySelector("#menu-drawer");
+
+  // Check if the details element is open
+  if (drawerContainer.hasAttribute("open")) {
+    // Check if the clicked target is outside the drawer
+    if (
+      !drawer.contains(event.target) &&
+      !drawerContainer.contains(event.target)
+    ) {
+      drawerContainer.removeAttribute("open"); // Close the drawer
+    }
+  }
+});

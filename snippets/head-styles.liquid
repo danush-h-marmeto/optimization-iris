@@ -2,11 +2,13 @@
 <noscript>
     <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
 </noscript>
-<link rel="preload" href="{{ 'section-image-banner.css' | asset_url }}" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}">
-</noscript>
+{%- if template.name == 'index' -%}
+    <link rel="preload" href="{{ 'section-image-banner.css' | asset_url }}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}">
+    </noscript>
+{%- endif -%}
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print"
