@@ -15,19 +15,20 @@
         "heading_PnWppx": {
           "type": "heading",
           "settings": {
-            "heading": "As the season turns",
-            "heading_size": "h1"
+            "heading": "",
+            "heading_size": "h3"
           }
         },
         "text_MNKAUm": {
           "type": "text",
           "settings": {
-            "text": "IRIS | AW24",
+            "text": "",
             "text_style": "body"
           }
         },
         "buttons_37qVHN": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "shopify://collections/by-iris-new-in",
@@ -44,13 +45,13 @@
         "buttons_37qVHN"
       ],
       "settings": {
-        "image": "shopify://shop_images/HP_Wk27_v2_5726aabe-5ced-40c4-8dec-a8b2506753c2.jpg",
-        "mobile_image": "shopify://shop_images/HP_FRANCES_V2.jpg",
+        "image": "shopify://shop_images/20Years_Desktop.png",
+        "mobile_image": "shopify://shop_images/20Years_Mobile.png",
         "banner_url": "shopify://collections/by-iris-new-in",
         "image_overlay_opacity": 0,
         "show_overlay_content": true,
         "enable_sale_text": false,
-        "desktop_content_position": "middle-right",
+        "desktop_content_position": "top-left",
         "show_text_box": false,
         "enable_image_zoom": false,
         "desktop_content_alignment": "left",
@@ -59,31 +60,73 @@
         "show_text_below": false
       }
     },
+    "rich_text_zn8tBr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zRg7W3": {
+          "type": "heading",
+          "settings": {
+            "heading": "20 Years of IRIS",
+            "heading_size": "h1"
+          }
+        },
+        "text_b3zEBw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>How a neighbourhood boutique became London's cult destination for beautiful clothes.</p>"
+          }
+        },
+        "button_eKcgJk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Our Story",
+            "button_link": "shopify://blogs/news/20-years-of-iris",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zRg7W3",
+        "text_b3zEBw",
+        "button_eKcgJk"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_product_list_RxJ7FF": {
       "type": "featured-product-list",
       "blocks": {
         "product_YBQwGH": {
           "type": "product",
           "settings": {
-            "product_item": "luna-cord-dress-pink"
+            "product_item": "edin-funnel-neck-jumper-pine"
           }
         },
         "product_pYGJkk": {
           "type": "product",
           "settings": {
-            "product_item": "harper-ditsy-print-skirt-pink"
+            "product_item": "rocco-cord-frill-blouse-pink"
           }
         },
         "product_wPGbwm": {
           "type": "product",
           "settings": {
-            "product_item": "rocco-cord-frill-blouse-pink"
+            "product_item": "tillie-ditsy-print-dress-brown"
           }
         },
         "product_T4jRkN": {
           "type": "product",
           "settings": {
-            "product_item": "frances-printed-cord-dress-navy"
+            "product_item": "sasha-cord-jumpsuit-2"
           }
         }
       },
@@ -346,7 +389,7 @@
         "button_LJwUJ8"
       ],
       "settings": {
-        "image": "shopify://shop_images/2a928f1678dd61765b1c4439d5c399da.webp",
+        "image": "shopify://shop_images/a5d1df512b686939924776b9daf7fbec.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -365,36 +408,36 @@
     "featured_product_list_jmaU7k": {
       "type": "featured-product-list",
       "blocks": {
-        "product_rmJrqU": {
-          "type": "product",
-          "settings": {
-            "product_item": "audrey-blouse-brown"
-          }
-        },
-        "product_TPVrUW": {
-          "type": "product",
-          "settings": {
-            "product_item": "dalida-embroidered-dress-navy"
-          }
-        },
         "product_awa77Q": {
           "type": "product",
           "settings": {
-            "product_item": "wilson-print-jacket-multi"
+            "product_item": "aragon-sleevless-cardigan-cream"
+          }
+        },
+        "product_rmJrqU": {
+          "type": "product",
+          "settings": {
+            "product_item": "cord-trousers-brown"
           }
         },
         "product_bW3eCy": {
           "type": "product",
           "settings": {
-            "product_item": "layla-smock-maxi-dress-rust"
+            "product_item": "colombella-check-shirt-brown"
+          }
+        },
+        "product_TPVrUW": {
+          "type": "product",
+          "settings": {
+            "product_item": "collar-shirt-cream"
           }
         }
       },
       "block_order": [
-        "product_rmJrqU",
-        "product_TPVrUW",
         "product_awa77Q",
-        "product_bW3eCy"
+        "product_rmJrqU",
+        "product_bW3eCy",
+        "product_TPVrUW"
       ],
       "settings": {
         "title": "",
@@ -582,6 +625,7 @@
   },
   "order": [
     "image_banner",
+    "rich_text_zn8tBr",
     "featured_product_list_RxJ7FF",
     "image_with_text_Br3ntN",
     "image_with_text_XEQrep",

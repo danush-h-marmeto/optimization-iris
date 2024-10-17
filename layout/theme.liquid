@@ -207,6 +207,7 @@
       {% render 'whats-this-popup' %}
       <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {%- endif -%}
+    {%- render 'iubenda', get: 'cookie-policy' -%}
     <script>
       Defer.all('script[type="lazy-script"]', 0, true);
     </script>

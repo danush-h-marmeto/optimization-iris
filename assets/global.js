@@ -1943,7 +1943,7 @@ class LazySection extends HTMLElement {
             const section = document.getElementById("shopify-section-" + key);
             section.innerHTML = sectionContent.innerHTML;
 
-            // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
+            // Reinjects the script tags to allow execution
             section.querySelectorAll("script").forEach((oldScriptTag) => {
               const newScriptTag = document.createElement("script");
               Array.from(oldScriptTag.attributes).forEach((attribute) => {
@@ -1953,6 +1953,13 @@ class LazySection extends HTMLElement {
                 document.createTextNode(oldScriptTag.innerHTML)
               );
               oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
+            });
+
+            // **Reinitialize lazy loading for new images**
+            const lazyImages = section.querySelectorAll(".lazy-load-image");
+            lazyImages.forEach((image) => {
+              image.style.opacity = "0"; // Hide image initially
+              lazyImageObserver.observe(image); // Observe the new image
             });
           }
         }
@@ -2019,22 +2026,27 @@ customElements.define(
 );
 function lazyLoadImage(image) {
   const dataSrc = image.getAttribute("data-src");
+
   if (dataSrc) {
-    image.src = dataSrc; // Set the src attribute to load the image
+    // Set the src attribute to start loading the image
+    image.src = dataSrc;
 
-    // Conditionally remove shimmer effect when the image is fully loaded
+    // Remove shimmer effect and display image once it's fully loaded
     image.onload = () => {
-      // Check for a specific condition (e.g., a specific class or data attribute)
-      if (image.classList.contains("remove-shimmer-on-load")) {
-        const container = image.closest(".lazy-load-container");
-        if (container) {
-          container.classList.remove("shimmer");
-        }
-        image.classList.add("image-loaded");
+      // Find the container with the shimmer effect
+      const container = image.closest(".lazy-load-container");
+      if (container) {
+        container.classList.remove("shimmer"); // Remove the shimmer effect
       }
-    };
 
-    image.removeAttribute("data-src"); // Remove the data-src once loaded
+      // Add a class to indicate that the image is loaded
+      image.classList.add("image-loaded");
+
+      // Make sure the image is visible
+      image.style.opacity = "1";
+    };
+    // Remove data-src once the image is loading
+    image.removeAttribute("data-src");
   }
 }
 
@@ -2044,15 +2056,19 @@ const lazyImageObserver = new IntersectionObserver((entries, observer) => {
     if (entry.isIntersecting) {
       const image = entry.target;
       lazyLoadImage(image); // Load the image when in view
-      lazyImageObserver.unobserve(image); // Stop observing after the image is loaded
+      lazyImageObserver.unobserve(image); // Stop observing once the image is loaded
     }
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+// Immediately invoke the function to initialize lazy image loading
+(function initLazyImages() {
   const lazyImages = document.querySelectorAll(".lazy-load-image");
+
   if ("IntersectionObserver" in window) {
     lazyImages.forEach((image) => {
+      // Set initial opacity to 0 to hide the alt text before image loads
+      image.style.opacity = "0";
       lazyImageObserver.observe(image);
     });
   } else {
@@ -2061,7 +2077,7 @@ document.addEventListener("DOMContentLoaded", function () {
       lazyLoadImage(image);
     });
   }
-});
+})();
 
 document.addEventListener("click", function (event) {
   const drawerContainer = document.querySelector(
@@ -2071,12 +2087,15 @@ document.addEventListener("click", function (event) {
 
   // Check if the details element is open
   if (drawerContainer.hasAttribute("open")) {
-    // Check if the clicked target is outside the drawer
+    // Check if the clicked target is outside the drawer and not on a <summary> element
     if (
       !drawer.contains(event.target) &&
-      !drawerContainer.contains(event.target)
+      !drawerContainer.contains(event.target) &&
+      event.target.tagName.toLowerCase() !== "summary"
     ) {
       drawerContainer.removeAttribute("open"); // Close the drawer
+      drawerContainer.classList.remove("menu-opening");
+      document.querySelector(".section-header").classList.remove('menu-open');
     }
   }
 });

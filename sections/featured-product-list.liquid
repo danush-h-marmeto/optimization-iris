@@ -1,3 +1,43 @@
+<script>
+   function initLazyLoadImages() {
+      const lazyImages = document.querySelectorAll(".lazy-image");
+
+      const options = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.1 // Load the image when at least 10% of it is in view
+      };
+
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+
+            // Load the image
+            img.srcset = img.getAttribute('data-srcset');
+            img.src = img.getAttribute('data-src');
+
+            // Remove the shimmer effect once the image is fully loaded
+            img.onload = () => {
+              img.classList.remove("shimmer");
+            };
+
+            // Stop observing the image once loaded
+            observer.unobserve(img);
+          }
+        });
+      }, options);
+
+      lazyImages.forEach(image => {
+        // Add shimmer effect before the image loads
+        image.classList.add("shimmer");
+        imageObserver.observe(image);
+      });
+    }
+
+    // Call the function directly when the script is lazy-loaded
+    initLazyLoadImages();
+</script>
 {%- capture lazy_load_section %}
 {%- render 'lazy-load-section-validations' -%}
 {%- endcapture -%}
@@ -165,35 +205,6 @@
     {%- endif -%}
   </div>
 </div>
-<script>document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll(".lazy-image");
-
-    const options = {
-      root: null, // Use the viewport as the root
-      rootMargin: "0px",
-      threshold: 0.1 // Load the image when at least 10% of it is in view
-    };
-
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-
-          // Set the src and srcset attributes
-          img.srcset = img.getAttribute('data-srcset');
-          img.src = img.getAttribute('data-src');
-
-          // Remove the observer once the image is loaded
-          observer.unobserve(img);
-        }
-      });
-    }, options);
-
-    lazyImages.forEach(image => {
-      imageObserver.observe(image);
-    });
-  });
-</script>
 {% else %}
   {%- render 'lazy-spinner' -%}
 {% endif %}
