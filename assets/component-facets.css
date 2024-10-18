@@ -617,7 +617,7 @@ span.active-facets__button-inner:after {
     position: sticky;
     padding-bottom: 2rem;
     top: var(--header-height);
-    z-index: 3;
+    z-index: 2;
     background: #fbfaf0;
   }
 

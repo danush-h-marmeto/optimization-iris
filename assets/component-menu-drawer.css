@@ -68,29 +68,30 @@ details[open].menu-opening > .menu-drawer__submenu {
 .js .menu-drawer__navigation .submenu-open {
   visibility: hidden; /* hide menus from screen readers when hidden by submenu */
 }
-.needsclick.kl-teaser-U2WHTD.kl-private-reset-css-Xuajs1{
+.needsclick.kl-teaser-U2WHTD.kl-private-reset-css-Xuajs1 {
   z-index: 2 !important;
 }
 @media screen and (min-width: 750px) and (max-width: 989px) {
-  .mega-menu--content{
+  .mega-menu--content {
     flex-direction: column;
   }
-  .menu-drawer__inner-submenu{
+  .menu-drawer__inner-submenu {
     padding: 0 4rem;
   }
-  .submenu-wrapper, .mega-menu--images {
+  .submenu-wrapper,
+  .mega-menu--images {
     padding: 0 4rem;
     display: block;
   }
   .menu-drawer {
     width: 80%;
   }
-  .header--has-social .menu-drawer__utility-links{
+  .header--has-social .menu-drawer__utility-links {
     width: 82% !important;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 767px) {
-  .header--has-social .menu-drawer__utility-links{
+  .header--has-social .menu-drawer__utility-links {
     width: 82% !important;
   }
 }
@@ -265,7 +266,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .header--has-social .menu-drawer__utility-links {
   padding: 2rem 3rem;
-  width: 84%;
+  width: 84.3%;
 }
 
 @media screen and (max-width: 749px) {

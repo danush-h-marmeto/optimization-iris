@@ -795,6 +795,7 @@ class HeaderDrawer extends MenuDrawer {
         drawerContainer.removeAttribute("open"); 
         drawerContainer.classList.remove("menu-opening");
         this.header.classList.remove("menu-open");
+        document.querySelector('body').classList.remove("overflow-hidden-tablet")
       }
     }
   }

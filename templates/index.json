@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner": {
@@ -31,7 +22,7 @@
           "disabled": true,
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/by-iris-new-in",
+            "button_link_1": "shopify:\/\/collections\/by-iris-new-in",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -45,9 +36,9 @@
         "buttons_37qVHN"
       ],
       "settings": {
-        "image": "shopify://shop_images/20Years_Desktop.png",
-        "mobile_image": "shopify://shop_images/20Years_Mobile.png",
-        "banner_url": "shopify://collections/by-iris-new-in",
+        "image": "shopify:\/\/shop_images\/20Years_Desktop.png",
+        "mobile_image": "shopify:\/\/shop_images\/20Years_Mobile.png",
+        "banner_url": "shopify:\/\/collections\/by-iris-new-in",
         "image_overlay_opacity": 0,
         "show_overlay_content": true,
         "enable_sale_text": false,
@@ -73,14 +64,14 @@
         "text_b3zEBw": {
           "type": "text",
           "settings": {
-            "text": "<h3>Join us today to celebrate our 20th Birthday and enjoy <strong>20%</strong> off our by IRIS collection. </h3><p><strong>Use code IRIS20 at checkout</strong></p>"
+            "text": "<h3>Join us today to celebrate our 20th Birthday and enjoy <strong>20%<\/strong> off our by IRIS collection. <\/h3><p><strong>Use code IRIS20 at checkout<\/strong><\/p>"
           }
         },
         "button_eKcgJk": {
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/by-iris-1",
+            "button_link": "shopify:\/\/collections\/by-iris-1",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -170,7 +161,7 @@
         "text_VYaXLt": {
           "type": "text",
           "settings": {
-            "text": "<p>Timeless autumnal chic in our most beloved silhouettes </p>",
+            "text": "<p>Timeless autumnal chic in our most beloved silhouettes <\/p>",
             "text_style": "subtitle"
           }
         },
@@ -178,7 +169,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/style-your-shae",
+            "button_link": "shopify:\/\/collections\/style-your-shae",
             "button_style_secondary": false
           }
         }
@@ -189,7 +180,7 @@
         "button_qmWPqg"
       ],
       "settings": {
-        "image": "shopify://shop_images/e03a7065ccb77927fd991701d6915fe5.jpg",
+        "image": "shopify:\/\/shop_images\/e03a7065ccb77927fd991701d6915fe5.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -218,7 +209,7 @@
         "text_YeyFdT": {
           "type": "text",
           "settings": {
-            "text": "<p>Discover the luxe feel and easy glamour of our printed satin capsule collection</p>",
+            "text": "<p>Discover the luxe feel and easy glamour of our printed satin capsule collection<\/p>",
             "text_style": "subtitle"
           }
         },
@@ -226,7 +217,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/the-satin-collection",
+            "button_link": "shopify:\/\/collections\/the-satin-collection",
             "button_style_secondary": false
           }
         }
@@ -237,7 +228,7 @@
         "button_Vjp47A"
       ],
       "settings": {
-        "image": "shopify://shop_images/7577782db03c567fa4557ab842cbf41c.jpg",
+        "image": "shopify:\/\/shop_images\/7577782db03c567fa4557ab842cbf41c.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -321,7 +312,7 @@
         "text_6jpe7Y": {
           "type": "text",
           "settings": {
-            "text": "<p>Join the founders of Moi London  in our Battersea store today for an event to celebrate our exclusive collaboration.</p>",
+            "text": "<p>Join the founders of Moi London  in our Battersea store today for an event to celebrate our exclusive collaboration.<\/p>",
             "text_style": "body"
           }
         },
@@ -329,7 +320,7 @@
           "type": "button",
           "settings": {
             "button_label": "DISCOVER MORE",
-            "button_link": "shopify://pages/events-at-iris",
+            "button_link": "shopify:\/\/pages\/events-at-iris",
             "button_style_secondary": false
           }
         }
@@ -341,7 +332,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/moi_london.webp",
+        "image": "shopify:\/\/shop_images\/moi_london.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -370,7 +361,7 @@
         "text_JJM8pf": {
           "type": "text",
           "settings": {
-            "text": "<p>Discover our latest arrivals</p>",
+            "text": "<p>Discover our latest arrivals<\/p>",
             "text_style": "subtitle"
           }
         },
@@ -378,7 +369,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NEW IN",
-            "button_link": "shopify://collections/new-in-this-week-1",
+            "button_link": "shopify:\/\/collections\/new-in-this-week-1",
             "button_style_secondary": false
           }
         }
@@ -389,7 +380,7 @@
         "button_LJwUJ8"
       ],
       "settings": {
-        "image": "shopify://shop_images/a5d1df512b686939924776b9daf7fbec.webp",
+        "image": "shopify:\/\/shop_images\/a5d1df512b686939924776b9daf7fbec.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -473,7 +464,7 @@
         "text_barcQW": {
           "type": "text",
           "settings": {
-            "text": "<p>From  neighbourhood boutique to cult fashion destination</p>",
+            "text": "<p>From  neighbourhood boutique to cult fashion destination<\/p>",
             "text_style": "body"
           }
         },
@@ -481,7 +472,7 @@
           "type": "button",
           "settings": {
             "button_label": "Discover More",
-            "button_link": "shopify://blogs/news/20-years-of-iris",
+            "button_link": "shopify:\/\/blogs\/news\/20-years-of-iris",
             "button_style_secondary": false
           }
         }
@@ -492,7 +483,7 @@
         "button_T7nH4q"
       ],
       "settings": {
-        "image": "shopify://shop_images/PHOTO-2024-10-16-17-12-06.jpg",
+        "image": "shopify:\/\/shop_images\/PHOTO-2024-10-16-17-12-06.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -567,7 +558,7 @@
     "covet_pics_3CTMqb": {
       "type": "covet-pics",
       "settings": {
-        "gallery-code": "<covet-pics-widget gallery-embed-id=\"151684\"></covet-pics-widget>",
+        "gallery-code": "<covet-pics-widget gallery-embed-id=\"151684\"><\/covet-pics-widget>",
         "color_scheme": "",
         "top_margin": 50,
         "bottom_margin": 0,
