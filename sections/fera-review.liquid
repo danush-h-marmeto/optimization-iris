@@ -1,26 +1,8 @@
-{%- capture lazy_load_section %}
-{%- render 'lazy-load-section-validations' -%}
-{%- endcapture -%}
-
-{% if lazy_load_section != blank %}
-<lazy-section>
-  {% endif %}
-{% if lazy_load_section == blank %}
-<div
-  data-fera-widget="product_reviews"
-  data-fera-id="fwid_2hP8qoi"
-  data-rating-count="{{ product.metafields.reviews.rating_count }}"
-  data-rating-average="{{ product.metafields.reviews.rating.value }}"
-  data-product-id="{{ product.id }}"
-></div>
-{% else %}
-  {%- render 'lazy-spinner' -%}
-{% endif %}
-
-{% if lazy_load_section != blank %}
-  </lazy-section>
-{% endif %}
-
+<div data-fera-widget='product_reviews' data-fera-id='fwid_2hP8qoi'
+  data-rating-count='{{ product.metafields.reviews.rating_count }}'
+  data-rating-average='{{ product.metafields.reviews.rating.value }}'
+  data-rating-count='{{ product.metafields.reviews.rating_count }}'
+  data-rating-average='{{ product.metafields.reviews.rating.value }}' data-product-id='{{ product.id }}'></div>
 {% schema %}
 {
   "name": "Fera Reviews",

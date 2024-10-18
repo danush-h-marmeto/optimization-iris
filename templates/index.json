@@ -73,14 +73,14 @@
         "text_b3zEBw": {
           "type": "text",
           "settings": {
-            "text": "<p>How a neighbourhood boutique became London's cult destination for beautiful clothes.</p>"
+            "text": "<h3>Join us today to celebrate our 20th Birthday and enjoy <strong>20%</strong> off our by IRIS collection. </h3><p><strong>Use code IRIS20 at checkout</strong></p>"
           }
         },
         "button_eKcgJk": {
           "type": "button",
           "settings": {
-            "button_label": "Our Story",
-            "button_link": "shopify://blogs/news/20-years-of-iris",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/by-iris-1",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -466,22 +466,22 @@
         "heading_CNkJcR": {
           "type": "heading",
           "settings": {
-            "heading": "Golden Glow",
+            "heading": "OUR STORY",
             "heading_size": "h0"
           }
         },
         "text_barcQW": {
           "type": "text",
           "settings": {
-            "text": "<p>As the nights draw in, we are gravitating towards the glowing creams and golds that are landing in the boutiques this week –</p>",
+            "text": "<p>From  neighbourhood boutique to cult fashion destination</p>",
             "text_style": "body"
           }
         },
         "button_T7nH4q": {
           "type": "button",
           "settings": {
-            "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/golden-glow",
+            "button_label": "Discover More",
+            "button_link": "shopify://blogs/news/20-years-of-iris",
             "button_style_secondary": false
           }
         }
@@ -492,7 +492,7 @@
         "button_T7nH4q"
       ],
       "settings": {
-        "image": "shopify://shop_images/6ba1b4543583ea19a38a1c8f990b1cdf.jpg",
+        "image": "shopify://shop_images/PHOTO-2024-10-16-17-12-06.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -542,6 +542,7 @@
         "product_aRMmiM",
         "product_e6ztRB"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",

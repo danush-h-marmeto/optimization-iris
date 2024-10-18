@@ -142,6 +142,7 @@
 .facets__form {
   display: grid;
   gap: 0 3.5rem;
+  align-items: center;
   grid-template-columns: 1fr max-content max-content;
   margin-bottom: 0.5rem;
 }
@@ -614,6 +615,7 @@ span.active-facets__button-inner:after {
   #main-collection-filters {
     position: -webkit-sticky;
     position: sticky;
+    padding-bottom: 2rem;
     top: var(--header-height);
     z-index: 3;
     background: #fbfaf0;

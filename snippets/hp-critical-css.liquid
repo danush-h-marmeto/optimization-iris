@@ -379,6 +379,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   }
   .menu-drawer__utility-links a {
     margin: 0 3rem;
+    display: flex !important
   }
 }
 
@@ -495,7 +496,11 @@ body:not(.mobile-menu-open) .burger span:nth-of-type(2) {
 .mobile-menu-open .burger__line {
   top: 50%;
 }
-
+@media screen and (min-width: 990px) {
+    header-drawer {
+        display: none;
+    }
+}
 .mobile-menu-open .burger__line:nth-of-type(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);

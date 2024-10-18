@@ -1787,6 +1787,7 @@ background-position:left !important
   width: 25px;
   height: auto;
   margin-right: 15px;
+  background: none;
 }
 
 .show-mobile-atc .product-form.active {

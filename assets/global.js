@@ -728,6 +728,7 @@ customElements.define("menu-drawer-collection", MenuDrawerCollection);
 class HeaderDrawer extends MenuDrawer {
   constructor() {
     super();
+    document.addEventListener("click", this.onDocumentClick.bind(this));
   }
 
   openMenuDrawer(summaryElement) {
@@ -777,6 +778,26 @@ class HeaderDrawer extends MenuDrawer {
       `${window.innerHeight}px`
     );
   };
+
+  onDocumentClick(e) {
+    const drawerContainer = document.querySelector(
+      "#Details-menu-drawer-container"
+    );
+    const drawer = document.querySelector("#menu-drawer");
+
+    // Check if the details element is open
+    if (drawerContainer.hasAttribute("open")) {
+      if (
+        !drawer.contains(e.target) &&
+        !drawerContainer.contains(e.target) &&
+        e.target.tagName.toLowerCase() !== "summary"
+      ) {
+        drawerContainer.removeAttribute("open"); 
+        drawerContainer.classList.remove("menu-opening");
+        this.header.classList.remove("menu-open");
+      }
+    }
+  }
 }
 
 customElements.define("header-drawer", HeaderDrawer);
@@ -2078,24 +2099,3 @@ const lazyImageObserver = new IntersectionObserver((entries, observer) => {
     });
   }
 })();
-
-document.addEventListener("click", function (event) {
-  const drawerContainer = document.querySelector(
-    "#Details-menu-drawer-container"
-  );
-  const drawer = document.querySelector("#menu-drawer");
-
-  // Check if the details element is open
-  if (drawerContainer.hasAttribute("open")) {
-    // Check if the clicked target is outside the drawer and not on a <summary> element
-    if (
-      !drawer.contains(event.target) &&
-      !drawerContainer.contains(event.target) &&
-      event.target.tagName.toLowerCase() !== "summary"
-    ) {
-      drawerContainer.removeAttribute("open"); // Close the drawer
-      drawerContainer.classList.remove("menu-opening");
-      document.querySelector(".section-header").classList.remove('menu-open');
-    }
-  }
-});
