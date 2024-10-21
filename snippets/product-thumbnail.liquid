@@ -55,7 +55,7 @@
       -%}
     </span>
     {%- render 'loading-spinner' -%}
-    <div class="product__media object-contain media media--transparent lazy-load-container shimmer">
+    <div class="product-media--first product__media object-contain media media--transparent lazy-load-container shimmer">
       {%- if position == 1 -%}     
         {{
           media.preview_image
@@ -67,10 +67,10 @@
             sizes: sizes,
             widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
         }}
-        {%- else -%}
-          {% assign image_width = block.settings.link_image.width %}
-          {% assign image_height = block.settings.link_image.height %}
-          {% assign aspect_ratio = image_width | divided_by: image_height %}
+      {%- else -%}
+        {% assign image_width = block.settings.link_image.width %}
+        {% assign image_height = block.settings.link_image.height %}
+        {% assign aspect_ratio = image_width | divided_by: image_height %}
         <img class="deferimg lazy-load-image {{ image_class }}" loading="lazy"
           data-src="{{ media.preview_image | img_url: 'master' }}" width="{{ image_width }}"
           height="{{ image_width | divided_by: aspect_ratio | round }}">

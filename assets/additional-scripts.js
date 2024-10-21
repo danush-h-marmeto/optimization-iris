@@ -24,6 +24,9 @@ class CustomPopup extends HTMLElement {
         this.toggleTryAtHome.bind(this)
       );
     }
+
+    // Check popup state from sessionStorage
+    this.checkPopupState();
   }
 
   // Handler for showing the popup
@@ -31,7 +34,10 @@ class CustomPopup extends HTMLElement {
     const whatsThisPopup = document.querySelector(".whats-this-popup");
     if (whatsThisPopup) {
       whatsThisPopup.classList.remove("hidden");
-      document.body.classList.add("no-scroll");
+      document.body.classList.add("overflow-hidden");
+
+      // Save popup state in sessionStorage
+      sessionStorage.setItem("popupState", "open");
     }
   }
 
@@ -40,7 +46,10 @@ class CustomPopup extends HTMLElement {
     const whatsThisPopup = document.querySelector(".whats-this-popup");
     if (whatsThisPopup) {
       whatsThisPopup.classList.add("hidden");
-      document.body.classList.remove("no-scroll");
+      document.body.classList.remove("overflow-hidden");
+
+      // Save popup state in sessionStorage
+      sessionStorage.setItem("popupState", "closed");
     }
   }
 
@@ -48,6 +57,17 @@ class CustomPopup extends HTMLElement {
   toggleTryAtHome() {
     if (this.tryAtHomeWrapper) {
       this.tryAtHomeWrapper.classList.toggle("active");
+    }
+  }
+
+  // Check and apply popup state from sessionStorage
+  checkPopupState() {
+    const popupState = sessionStorage.getItem("popupState");
+
+    if (popupState === "open") {
+      this.showPopup(); // Keep the popup open if the state is "open"
+    } else {
+      this.hidePopup(); // Ensure the popup is closed otherwise
     }
   }
 }

@@ -72,6 +72,8 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    {% render 'whats-this-popup' %}
+    <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {% sections 'header-group' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -202,8 +204,6 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{'animation.js' |  asset_url}}" defer></script>
-      {% render 'whats-this-popup' %}
-      <script src="{{ 'additional-scripts.js' |  asset_url }}" defer></script>
     {%- render 'iubenda', get: 'cookie-policy' -%}
         <!-- GSSTART Coming Soon code start. Do not change -->
     <script type="text/javascript">

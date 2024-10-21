@@ -1644,7 +1644,7 @@ background-position:left !important
   .cbb-also-bought-container {
     margin-top: 40px;
     margin-bottom: 40px;
-    z-index:-1;
+    padding: 0 2rem;
   }
 }
 .cbb-also-bought-next,

@@ -23,7 +23,33 @@
         assign show_dynamic_checkout = true
       endif
     -%}
+    {%- assign pre_order_enable = false -%}
+    {%- comment -%} Check if Apply All is enabled {%- endcomment -%}
+    {% for variant in product.variants %}
+      {% if variant.metafields.preorder.enable_all %}
+        {% assign product_variant = variant %}
+        {% assign pre_order_enable = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {%- comment -%} Pre-order Variables {%- endcomment -%}
+    {% assign pre_order_estimated_dispatch = product_variant.metafields.preorder.estimated_dispatch.value | date: '%B %Y'
+    %}
+    {% assign pre_order_estimated_dispatch_comparison = product_variant.metafields.preorder.estimated_dispatch.value | date: '%s'
+    %}
+    {% assign today_date = 'now' | date: '%s' %}
+    {% assign pre_order_start_date = product_variant.metafields.preorder.start_date.value | date: '%s' %}
+    {% assign pre_order_end_date = product_variant.metafields.preorder.end_date.value | date: '%s' %}
 
+    {%- comment -%} Checks start and end date {%- endcomment -%}
+    {% if pre_order_end_date and pre_order_end_date < today_date %} {% assign pre_order_enable = false %} {% endif %}
+    {% if pre_order_start_date and pre_order_start_date > today_date %}
+      {% assign pre_order_enable = false %}
+    {% endif %}
+    {%- comment -%} Check whether Estimated Dispatch is in the future {%- endcomment -%}
+    {% if pre_order_estimated_dispatch_comparison < today_date %}
+      {% assign pre_order_estimated_dispatch = blank %}
+    {% endif %}
     <product-form
       class="product-form"
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
@@ -60,7 +86,9 @@
           {% endif %}
           class="product-variant-id"
         >
-
+        {%- if pre_order_enable -%}
+          <input type="hidden" name="properties[Pre-order]" value="True">
+        {%- endif -%}
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
@@ -85,10 +113,19 @@
             {% endif %}
           >
             <span id="atc-text">
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
+              {% if pre_order_enable %}
+                {%- if pre_order_estimated_dispatch != blank -%}
+                  <span class="preorder-text">{{ 'products.product.pre_order_button_text' | t }}</span>
+                  <span class="preorder-text--date">Estimated {{ pre_order_estimated_dispatch }}</span>
+                {%- else -%}
+                  <span class="preorder-text">{{ 'products.product.pre_order_button_text' | t }}</span>
+                {%- endif -%}
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}

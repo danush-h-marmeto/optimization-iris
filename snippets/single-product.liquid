@@ -9,7 +9,10 @@
             {% else %}
                 {% assign single_product_sizes = '(max-width: 768px) calc(50vw - 20px), (min-width: 769px) and (max-width: 1024px) 33vw, calc(25vw - 15px)' %}
             {% endif %}
-            <img class="lazy-load-image" data-src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.alt | escape }}">
+            <div class="lazy-load-container">
+                <img class="lazy-load-image" data-src="{{ product.featured_image | img_url: 'master' }}"
+                    alt="{{ product.featured_image.alt | escape }}">
+            </div>
         </a>
         {%- unless class contains 'single-product__sm' -%}
             {%- render 'product-variant-links', class: 'single-product__variants' -%}
