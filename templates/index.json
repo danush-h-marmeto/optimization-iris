@@ -15,15 +15,15 @@
         "heading_PnWppx": {
           "type": "heading",
           "settings": {
-            "heading": "",
-            "heading_size": "h3"
+            "heading": "IRIS COLLECTION",
+            "heading_size": "h1"
           }
         },
         "text_MNKAUm": {
           "type": "text",
           "settings": {
-            "text": "",
-            "text_style": "body"
+            "text": "AW/24",
+            "text_style": "subtitle"
           }
         },
         "buttons_37qVHN": {
@@ -45,8 +45,8 @@
         "buttons_37qVHN"
       ],
       "settings": {
-        "image": "shopify://shop_images/20Years_Desktop.png",
-        "mobile_image": "shopify://shop_images/20Years_Mobile.png",
+        "image": "shopify://shop_images/HP_DT_WK30.jpg",
+        "mobile_image": "shopify://shop_images/HP_MB_Wk30.jpg",
         "banner_url": "shopify://collections/by-iris-new-in",
         "image_overlay_opacity": 0,
         "show_overlay_content": true,
@@ -73,7 +73,7 @@
         "text_b3zEBw": {
           "type": "text",
           "settings": {
-            "text": "<h3>Join us today to celebrate our 20th Birthday and enjoy <strong>20%</strong> off our IRIS collection. </h3><p><strong>Use code IRIS20 at checkout</strong></p>"
+            "text": "<h3>From neighbourhood boutique to cult fashion destination</h3><h4></h4>"
           }
         },
         "button_eKcgJk": {
@@ -93,6 +93,7 @@
         "text_b3zEBw",
         "button_eKcgJk"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -466,22 +467,22 @@
         "heading_CNkJcR": {
           "type": "heading",
           "settings": {
-            "heading": "OUR STORY",
+            "heading": "Romantic Blouses",
             "heading_size": "h0"
           }
         },
         "text_barcQW": {
           "type": "text",
           "settings": {
-            "text": "<p>From  neighbourhood boutique to cult fashion destination</p>",
+            "text": "<p>Lace panels, puffed shoulders, frilled cuffs: at Iris, we are obsessed with the new romantic blouses. </p>",
             "text_style": "body"
           }
         },
         "button_T7nH4q": {
           "type": "button",
           "settings": {
-            "button_label": "Discover More",
-            "button_link": "shopify://blogs/news/20-years-of-iris",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/tops-shirts",
             "button_style_secondary": false
           }
         }
@@ -492,7 +493,7 @@
         "button_T7nH4q"
       ],
       "settings": {
-        "image": "shopify://shop_images/PHOTO-2024-10-16-17-12-06.jpg",
+        "image": "shopify://shop_images/12b0dac4628ba922c5ca5f7dc2acfb07.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -514,35 +515,34 @@
         "product_rMaHta": {
           "type": "product",
           "settings": {
-            "product_item": "obria-knit-gold"
+            "product_item": "tokyo-embroidered-top-ecru"
           }
         },
         "product_Qg6G9e": {
           "type": "product",
           "settings": {
-            "product_item": "divinou-suede-bag-chocolate"
-          }
-        },
-        "product_aRMmiM": {
-          "type": "product",
-          "settings": {
-            "product_item": "delias-trousers-beige"
+            "product_item": "anselme-frill-top-black"
           }
         },
         "product_e6ztRB": {
           "type": "product",
           "settings": {
-            "product_item": "medalist-low-trainer-platinum-1"
+            "product_item": "erin-buttoned-blouse-1"
+          }
+        },
+        "product_aRMmiM": {
+          "type": "product",
+          "settings": {
+            "product_item": "belina-cut-out-top-cream"
           }
         }
       },
       "block_order": [
         "product_rMaHta",
         "product_Qg6G9e",
-        "product_aRMmiM",
-        "product_e6ztRB"
+        "product_e6ztRB",
+        "product_aRMmiM"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
