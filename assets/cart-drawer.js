@@ -102,6 +102,7 @@ class CartDrawer extends HTMLElement {
         "click",
         this.close.bind(this)
       );
+      initLazyImages();
       this.open();
     });
   }

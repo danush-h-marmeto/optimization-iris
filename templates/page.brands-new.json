@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -427,13 +436,13 @@
       "settings": {
         "enable_hero": true,
         "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
-        "hero_image": "shopify:\/\/shop_images\/hero_IMG.jpg",
-        "hero_overlay_opacity": 10,
+        "hero_image": "shopify://shop_images/P1A7326.jpg",
+        "hero_overlay_opacity": 48,
         "hero_height": 330,
         "hero_height_mobile": 250,
-        "hero_text_color": "#ffffff",
+        "hero_text_color": "#fbfaf0",
         "hero_title": "Brands",
-        "hero_text": "<p>Iris Fashion brings you a carefully selected collection of contemporary women's fashion from established and up and coming designers.<\/p>",
+        "hero_text": "<h5>Iris Fashion brings you a carefully selected collection of contemporary women's fashion from established and up and coming designers.</h5>",
         "padding_top": 80,
         "padding_bottom": 36
       }

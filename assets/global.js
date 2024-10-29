@@ -1977,7 +1977,6 @@ class LazySection extends HTMLElement {
               oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
             });
 
-            // **Reinitialize lazy loading for new images**
             const lazyImages = section.querySelectorAll(".lazy-load-image");
             lazyImages.forEach((image) => {
               image.style.opacity = "0"; // Hide image initially

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -78,11 +87,11 @@
       ],
       "settings": {
         "section_heading": "",
-        "section_description": "<p>For any queries or feedback please complete the form below. We endeavour to respond to e-mails within 48 hours but at busy times this can take longer. If you require more urgent assistance, wish to place an order or speak to a customer service advisor directly please call 020 8747 3597.<\/p><p>Office Opening Hours: <strong>Monday<\/strong> to <strong>Friday<\/strong>, <strong>9.30 - 5.30 pm<\/strong><br\/>Any enquires submitted during a weekend will be answered the next working day.<\/p>",
+        "section_description": "<p>For any queries or feedback please complete the form below. We endeavour to respond to e-mails within 48 hours but at busy times this can take longer. If you require more urgent assistance, wish to place an order or speak to a customer service advisor directly please call 020 8747 3597.</p><p>Office Opening Hours: <strong>Monday</strong> to <strong>Friday</strong>, <strong>9.30 - 5.30 pm</strong><br/>Any enquires submitted during a weekend will be answered the next working day.</p>",
         "title": "GET IN TOUCH",
         "thank_you_title": "Thank you",
-        "thank_you_text": "<p>Your message has been sent<\/p>",
-        "thank_you_cta_link": "https:\/\/www.irisfashion.co.uk\/",
+        "thank_you_text": "<p>Your message has been sent</p>",
+        "thank_you_cta_link": "https://www.irisfashion.co.uk/",
         "thank_you_cta_text": "Back to home"
       }
     },
@@ -93,7 +102,7 @@
           "type": "location",
           "settings": {
             "page": "barnes-1",
-            "image": "shopify:\/\/shop_images\/Barnes_c50ba590-3992-4433-8b76-a948ab65f33b.jpg",
+            "image": "shopify://shop_images/Barnes_c50ba590-3992-4433-8b76-a948ab65f33b.jpg",
             "email": "barnes@irisfashion.co.uk",
             "address": "86 Church Road, Barnes, SW13 0DQ",
             "btn_text": ""
@@ -103,7 +112,7 @@
           "type": "location",
           "settings": {
             "page": "battersea-1",
-            "image": "shopify:\/\/shop_images\/Battersea.jpg",
+            "image": "shopify://shop_images/Battersea.jpg",
             "email": "battersea@irisfashion.co.uk",
             "address": "143-145 Northcote Road, London, SW11 6PX",
             "btn_text": ""
@@ -113,7 +122,7 @@
           "type": "location",
           "settings": {
             "page": "hampstead-1",
-            "image": "shopify:\/\/shop_images\/Store_Hampstead.jpg",
+            "image": "shopify://shop_images/Store_Hampstead.jpg",
             "email": "hampstead@irisfashion.co.uk",
             "address": "28 Rosslyn Hill, London, NW3 1NH",
             "btn_text": ""
@@ -123,7 +132,7 @@
           "type": "location",
           "settings": {
             "page": "wimbledon-1",
-            "image": "shopify:\/\/shop_images\/wimbledon_pic.jpg",
+            "image": "shopify://shop_images/wimbledon_pic.jpg",
             "email": "customercare@irisfashion.co.uk",
             "address": "74 High St, Wimbledon SW19 5EG",
             "btn_text": ""
@@ -133,7 +142,7 @@
           "type": "location",
           "settings": {
             "page": "chiswick-pop-up-store-1",
-            "image": "shopify:\/\/shop_images\/CHISWICK_STORE.jpg",
+            "image": "shopify://shop_images/CHISWICK_STORE.jpg",
             "email": "chiswick@irisfashoin.co.uk",
             "address": "198 Chiswick High Rd, London W4 1PD",
             "btn_text": ""

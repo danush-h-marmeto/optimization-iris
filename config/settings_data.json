@@ -298,12 +298,12 @@
       },
       "scheme-022ef7e5-df4c-4fe5-a6b9-03a54cd43ca3": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#fbfaf0",
           "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
+          "text": "#fbfaf0",
+          "button": "#c1857e",
+          "button_label": "#fbfaf0",
+          "secondary_button_label": "#330f07",
           "shadow": "#121212"
         }
       },

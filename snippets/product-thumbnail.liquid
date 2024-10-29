@@ -68,12 +68,11 @@
             widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
         }}
       {%- else -%}
-        {% assign image_width = block.settings.link_image.width %}
-        {% assign image_height = block.settings.link_image.height %}
-        {% assign aspect_ratio = image_width | divided_by: image_height %}
+        {% assign image_width = media.preview_image.width %}
+        {% assign image_height = media.preview_image.height %}
         <img class="deferimg lazy-load-image {{ image_class }}" loading="lazy"
           data-src="{{ media.preview_image | img_url: 'master' }}" width="{{ image_width }}"
-          height="{{ image_width | divided_by: aspect_ratio | round }}">
+          height="{{ image_height }}">
       {%- endif -%}
     </div>
     <button

@@ -15,23 +15,22 @@
         "heading_PnWppx": {
           "type": "heading",
           "settings": {
-            "heading": "IRIS COLLECTION",
+            "heading": "MAGIC IN THE AIR",
             "heading_size": "h1"
           }
         },
         "text_MNKAUm": {
           "type": "text",
           "settings": {
-            "text": "AW/24",
+            "text": "The Holiday Collection",
             "text_style": "subtitle"
           }
         },
         "buttons_37qVHN": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/by-iris-new-in",
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify://collections/new-in-this-week-1",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -45,62 +44,19 @@
         "buttons_37qVHN"
       ],
       "settings": {
-        "image": "shopify://shop_images/HP_DT_WK30.jpg",
-        "mobile_image": "shopify://shop_images/HP_MB_Wk30.jpg",
+        "image": "shopify://shop_images/Untitled_design.png",
+        "mobile_image": "shopify://shop_images/Holiday2_Mobile.png",
         "banner_url": "shopify://collections/by-iris-new-in",
         "image_overlay_opacity": 0,
         "show_overlay_content": true,
         "enable_sale_text": false,
-        "desktop_content_position": "top-left",
+        "desktop_content_position": "middle-right",
         "show_text_box": false,
         "enable_image_zoom": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-022ef7e5-df4c-4fe5-a6b9-03a54cd43ca3",
         "mobile_content_alignment": "center",
         "show_text_below": false
-      }
-    },
-    "rich_text_zn8tBr": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_zRg7W3": {
-          "type": "heading",
-          "settings": {
-            "heading": "20 Years of IRIS",
-            "heading_size": "h1"
-          }
-        },
-        "text_b3zEBw": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>From neighbourhood boutique to cult fashion destination</h3><h4></h4>"
-          }
-        },
-        "button_eKcgJk": {
-          "type": "button",
-          "settings": {
-            "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/by-iris-1",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_zRg7W3",
-        "text_b3zEBw",
-        "button_eKcgJk"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "featured_product_list_RxJ7FF": {
@@ -109,33 +65,33 @@
         "product_YBQwGH": {
           "type": "product",
           "settings": {
-            "product_item": "edin-funnel-neck-jumper-pine"
-          }
-        },
-        "product_pYGJkk": {
-          "type": "product",
-          "settings": {
-            "product_item": "rocco-cord-frill-blouse-pink"
+            "product_item": "amira-sequin-jacket-black"
           }
         },
         "product_wPGbwm": {
           "type": "product",
           "settings": {
-            "product_item": "tillie-ditsy-print-dress-brown"
+            "product_item": "camilla-metallic-knit-jumper-gold"
           }
         },
         "product_T4jRkN": {
           "type": "product",
           "settings": {
-            "product_item": "sasha-cord-jumpsuit-2"
+            "product_item": "flora-gathered-dress-black"
+          }
+        },
+        "product_pYGJkk": {
+          "type": "product",
+          "settings": {
+            "product_item": "ina-sequin-dress-gold"
           }
         }
       },
       "block_order": [
         "product_YBQwGH",
-        "product_pYGJkk",
         "product_wPGbwm",
-        "product_T4jRkN"
+        "product_T4jRkN",
+        "product_pYGJkk"
       ],
       "settings": {
         "title": "",
@@ -158,20 +114,123 @@
         "top_overlap": 0
       }
     },
+    "image_with_text_6xDng3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CNkJcR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spend and Save",
+            "heading_size": "h0"
+          }
+        },
+        "text_barcQW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With Autumn in full swing, we’re offering a fantastic mid-season promotion.</p><p></p><p>Spend £200: Enjoy £30 Off  </p><p>Spend £400 - Enjoy £70 Off </p><p>Spend £750 - Enjoy £150 Off</p><p></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_T7nH4q": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/new-in-this-week-1",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CNkJcR",
+        "text_barcQW",
+        "button_T7nH4q"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2024_08_12_Iris_AW_Campaign_SHOT_16_069.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "enable_accent_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_list_7JkEPV": {
+      "type": "featured-product-list",
+      "blocks": {
+        "product_rMaHta": {
+          "type": "product",
+          "settings": {
+            "product_item": "tillie-ditsy-print-dress-brown"
+          }
+        },
+        "product_aRMmiM": {
+          "type": "product",
+          "settings": {
+            "product_item": "ulla-stripe-roll-neck-jumper-tawny-and-navy"
+          }
+        },
+        "product_Qg6G9e": {
+          "type": "product",
+          "settings": {
+            "product_item": "skyla-wool-vest-brown"
+          }
+        },
+        "product_e6ztRB": {
+          "type": "product",
+          "settings": {
+            "product_item": "reign-cord-jean-khaki"
+          }
+        }
+      },
+      "block_order": [
+        "product_rMaHta",
+        "product_aRMmiM",
+        "product_Qg6G9e",
+        "product_e6ztRB"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_animation": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 76,
+        "padding_bottom": 36,
+        "top_overlap": 200
+      }
+    },
     "image_with_text_Br3ntN": {
       "type": "image-with-text",
       "blocks": {
         "heading_Y4UYnk": {
           "type": "heading",
           "settings": {
-            "heading": "The Tartan Collection",
+            "heading": "The Holiday Collection",
             "heading_size": "h0"
           }
         },
         "text_VYaXLt": {
           "type": "text",
           "settings": {
-            "text": "<p>Timeless autumnal chic in our most beloved silhouettes </p>",
+            "text": "<p>Aglow with seasonal shimmer and moody jewel tones, each piece has been designed for generous helpings of comfort and joy.</p>",
             "text_style": "subtitle"
           }
         },
@@ -179,7 +238,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/style-your-shae",
+            "button_link": "shopify://collections/the-holiday-collection",
             "button_style_secondary": false
           }
         }
@@ -190,7 +249,7 @@
         "button_qmWPqg"
       ],
       "settings": {
-        "image": "shopify://shop_images/e03a7065ccb77927fd991701d6915fe5.jpg",
+        "image": "shopify://shop_images/WOWWDRX40028_BUR_1.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -364,7 +423,7 @@
         "heading_nLFVyR": {
           "type": "heading",
           "settings": {
-            "heading": "New in",
+            "heading": "New In Brands at IRIS",
             "heading_size": "h0"
           }
         },
@@ -378,8 +437,8 @@
         "button_LJwUJ8": {
           "type": "button",
           "settings": {
-            "button_label": "SHOP NEW IN",
-            "button_link": "shopify://collections/new-in-this-week-1",
+            "button_label": "SHOP NEW IN BRANDS",
+            "button_link": "shopify://collections/new-in-branded",
             "button_style_secondary": false
           }
         }
@@ -390,7 +449,7 @@
         "button_LJwUJ8"
       ],
       "settings": {
-        "image": "shopify://shop_images/a5d1df512b686939924776b9daf7fbec.webp",
+        "image": "shopify://shop_images/0d7a031ae2561517ef22a88e49818903_61ef20bc-0700-4a34-b36d-728f2f634a73.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -412,136 +471,33 @@
         "product_awa77Q": {
           "type": "product",
           "settings": {
-            "product_item": "aragon-sleevless-cardigan-cream"
+            "product_item": "opera-printed-gilet-navy"
           }
         },
         "product_rmJrqU": {
           "type": "product",
           "settings": {
-            "product_item": "cord-trousers-brown"
-          }
-        },
-        "product_bW3eCy": {
-          "type": "product",
-          "settings": {
-            "product_item": "colombella-check-shirt-brown"
+            "product_item": "coralie-stud-ballerina-black"
           }
         },
         "product_TPVrUW": {
           "type": "product",
           "settings": {
-            "product_item": "collar-shirt-cream"
+            "product_item": "tokyo-embroidered-top-ecru"
+          }
+        },
+        "product_bW3eCy": {
+          "type": "product",
+          "settings": {
+            "product_item": "mineta-flower-knit-red"
           }
         }
       },
       "block_order": [
         "product_awa77Q",
         "product_rmJrqU",
-        "product_bW3eCy",
-        "product_TPVrUW"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "columns_desktop": 4,
-        "full_width": true,
-        "enable_animation": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_vendor": true,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 76,
-        "padding_bottom": 36,
-        "top_overlap": 200
-      }
-    },
-    "image_with_text_6xDng3": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_CNkJcR": {
-          "type": "heading",
-          "settings": {
-            "heading": "Romantic Blouses",
-            "heading_size": "h0"
-          }
-        },
-        "text_barcQW": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Lace panels, puffed shoulders, frilled cuffs: at Iris, we are obsessed with the new romantic blouses. </p>",
-            "text_style": "body"
-          }
-        },
-        "button_T7nH4q": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/tops-shirts",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_CNkJcR",
-        "text_barcQW",
-        "button_T7nH4q"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/12b0dac4628ba922c5ca5f7dc2acfb07.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
-        "color_scheme": "scheme-6bcca103-74e2-4115-a8d3-8336eb326342",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "enable_accent_overlay": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_list_7JkEPV": {
-      "type": "featured-product-list",
-      "blocks": {
-        "product_rMaHta": {
-          "type": "product",
-          "settings": {
-            "product_item": "tokyo-embroidered-top-ecru"
-          }
-        },
-        "product_Qg6G9e": {
-          "type": "product",
-          "settings": {
-            "product_item": "anselme-frill-top-black"
-          }
-        },
-        "product_e6ztRB": {
-          "type": "product",
-          "settings": {
-            "product_item": "erin-buttoned-blouse-1"
-          }
-        },
-        "product_aRMmiM": {
-          "type": "product",
-          "settings": {
-            "product_item": "belina-cut-out-top-cream"
-          }
-        }
-      },
-      "block_order": [
-        "product_rMaHta",
-        "product_Qg6G9e",
-        "product_e6ztRB",
-        "product_aRMmiM"
+        "product_TPVrUW",
+        "product_bW3eCy"
       ],
       "settings": {
         "title": "",
@@ -626,16 +582,15 @@
   },
   "order": [
     "image_banner",
-    "rich_text_zn8tBr",
     "featured_product_list_RxJ7FF",
+    "image_with_text_6xDng3",
+    "featured_product_list_7JkEPV",
     "image_with_text_Br3ntN",
     "image_with_text_XEQrep",
     "featured_product_list_WmVGRP",
     "image_with_text_VPMcKz",
     "image_with_text_P3jnNt",
     "featured_product_list_jmaU7k",
-    "image_with_text_6xDng3",
-    "featured_product_list_7JkEPV",
     "covet_pics_3CTMqb",
     "image_banner_d8WJUJ"
   ]

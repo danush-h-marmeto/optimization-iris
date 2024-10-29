@@ -101,7 +101,8 @@ details[open].menu-opening > .menu-drawer__submenu {
     border-style: solid;
     border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
   }
-  .list-menu__item {
+  .menu-drawer__menu-item{
+    width: max-content;
   }
 }
 #menu-drawer .mega-menu--content ul li:hover a {
