@@ -311,8 +311,8 @@
                      {% assign image_width = settings.cart_usp_icon_1.width %}
                      {% assign image_height = settings.cart_usp_icon_1.height %}
                      {% assign aspect_ratio = image_width | divided_by: image_height %}
-                     <img class="lazy-load-image" loading="lazy"
-                        data-src="{{ settings.cart_usp_icon_1 | img_url: 'master' }}" width="{{ image_width }}"
+                     <img loading="lazy"
+                        src="{{ settings.cart_usp_icon_1 | img_url: 'master' }}" width="{{ image_width }}"
                         height="{{ image_width | divided_by: aspect_ratio | round }}" alt="{{ settings.cart_usp_icon_1.alt | escape }}">
                  </div>
                  {% endif %}
@@ -339,7 +339,7 @@
                   {% assign image_width = settings.cart_usp_icon_2.width %}
                   {% assign image_height = settings.cart_usp_icon_2.height %}
                   {% assign aspect_ratio = image_width | divided_by: image_height %}
-                  <img class="lazy-load-image" loading="lazy" data-src="{{ settings.cart_usp_icon_1 | img_url: 'master' }}"
+                  <img loading="lazy" src="{{ settings.cart_usp_icon_1 | img_url: 'master' }}"
                      width="{{ image_width }}" height="{{ image_width | divided_by: aspect_ratio | round }}"
                      alt="{{ settings.cart_usp_icon_2.alt | escape }}">
                  </div>
@@ -367,7 +367,7 @@
                   {% assign image_width = settings.cart_usp_icon_3.width %}
                   {% assign image_height = settings.cart_usp_icon_3.height %}
                   {% assign aspect_ratio = image_width | divided_by: image_height %}
-                  <img class="lazy-load-image" loading="lazy" data-src="{{ settings.cart_usp_icon_3 | img_url: 'master' }}"
+                  <img loading="lazy" src="{{ settings.cart_usp_icon_3 | img_url: 'master' }}"
                      width="{{ image_width }}" height="{{ image_width | divided_by: aspect_ratio | round }}"
                      alt="{{ settings.cart_usp_icon_3.alt | escape }}">
                  </div>
