@@ -30,7 +30,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP NOW",
-            "button_link_1": "shopify://collections/new-in-this-week-1",
+            "button_link_1": "shopify://collections/the-holiday-collection",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -128,7 +128,7 @@
           "type": "text",
           "settings": {
             "text": "<p>With Autumn in full swing, we’re offering a fantastic mid-season promotion.</p><p></p><p>Spend £200: Enjoy £30 Off  </p><p>Spend £400 - Enjoy £70 Off </p><p>Spend £750 - Enjoy £150 Off</p><p></p>",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         },
         "button_T7nH4q": {
@@ -174,7 +174,7 @@
         "product_aRMmiM": {
           "type": "product",
           "settings": {
-            "product_item": "ulla-stripe-roll-neck-jumper-tawny-and-navy"
+            "product_item": "mae-cotton-linen-blouse-white"
           }
         },
         "product_Qg6G9e": {
@@ -231,7 +231,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Aglow with seasonal shimmer and moody jewel tones, each piece has been designed for generous helpings of comfort and joy.</p>",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         },
         "button_qmWPqg": {
@@ -271,22 +271,22 @@
         "heading_hqtqfh": {
           "type": "heading",
           "settings": {
-            "heading": "Printed Satin",
+            "heading": "Autumnal Heritage",
             "heading_size": "h0"
           }
         },
         "text_YeyFdT": {
           "type": "text",
           "settings": {
-            "text": "<p>Discover the luxe feel and easy glamour of our printed satin capsule collection</p>",
-            "text_style": "subtitle"
+            "text": "<p>We're going autumnal heritage for bonfire night this year: think classic tweeds and checks layered over vintage florals in soft, earthy colourways.</p>",
+            "text_style": "body"
           }
         },
         "button_Vjp47A": {
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/the-satin-collection",
+            "button_link": "shopify://collections/new-in-this-week-1",
             "button_style_secondary": false
           }
         }
@@ -297,7 +297,7 @@
         "button_Vjp47A"
       ],
       "settings": {
-        "image": "shopify://shop_images/7577782db03c567fa4557ab842cbf41c.jpg",
+        "image": "shopify://shop_images/def0e1376e6b1add086b678f17f3d1ec_2a42edfa-cf81-4526-af7d-0fe5e66e0ba1.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -319,25 +319,25 @@
         "product_FUeXU8": {
           "type": "product",
           "settings": {
-            "product_item": "alice-satin-printed-maxi-skirt-navy"
+            "product_item": "sonia-long-coat-oatmeal"
           }
         },
         "product_PFh7Mg": {
           "type": "product",
           "settings": {
-            "product_item": "nixi-satin-dress-navy"
+            "product_item": "roberta-dress-print"
           }
         },
         "product_UpzwNw": {
           "type": "product",
           "settings": {
-            "product_item": "seren-printed-satin-dress-indigo"
+            "product_item": "harpe-check-pants-black-white"
           }
         },
         "product_8JUeHE": {
           "type": "product",
           "settings": {
-            "product_item": "imani-print-blouse-indigo"
+            "product_item": "flower-blouse-black"
           }
         }
       },
@@ -431,7 +431,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Discover our latest arrivals</p>",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         },
         "button_LJwUJ8": {
